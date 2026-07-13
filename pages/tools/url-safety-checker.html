@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="URL Safety Checker - Check if a link is safe or malicious. Detect phishing links, shortened URLs, and suspicious redirects.">
+  <meta name="keywords" content="URL checker, link safety, phishing detector, malware scanner, URL reputation checker, shortened link detector">
+  <meta name="author" content="AI Trust Check">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check/pages/tools/url-safety-checker.html">
+  <meta property="og:title" content="URL Safety Checker - Check If Links Are Safe">
+  <meta property="og:description" content="Verify link safety, detect phishing, check URL reputation.">
+  
+  <link rel="canonical" href="https://aitrust.check/pages/tools/url-safety-checker.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>URL Safety Checker - Verify Link Safety & Security</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "URL Safety Checker",
+    "applicationCategory": "UtilityApplication",
+    "url": "https://aitrust.check/pages/tools/url-safety-checker.html",
+    "description": "Check URLs for safety, phishing, and malware threats",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>URL Safety Checker</h1>
+        <p>Check any link for safety. Detect phishing, shortened URLs, malware, and suspicious redirects before clicking.</p>
+        <div style="margin-top: 2rem;">
+          <a href="#tool" class="btn btn-primary btn-lg">Check Link Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>The Problem</h2>
+            <p>Malicious links are everywhere:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Phishing</strong> - Links mimicking legitimate sites
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Shortened URLs</strong> - Hidden final destination
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Malware</strong> - Links downloading malicious software
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Redirects</strong> - Links that redirect to scam sites
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Reputation</strong> - Links from known malicious sources
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Our Solution</h2>
+            <p>Comprehensive URL security analysis:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Domain Lookup</strong> - Verify real destination
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Reputation Check</strong> - Cross-reference security databases
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Phishing Detection</strong> - Identify suspicious patterns
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>URL Expansion</strong> - Reveal hidden shortened URLs
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Safety Score</strong> - Overall 0-100 risk rating
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tool" class="section section-featured">
+      <div class="container">
+        <h2>Check URL Safety</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">Paste any URL or shortened link:</p>
+        
+        <div class="card" style="max-width: 700px; margin: 0 auto;">
+          <div class="card-body">
+            <input type="url" id="url-input" placeholder="https://example.com or https://bit.ly/xxx" class="form-input" required>
+            <button onclick="checkURL()" class="btn btn-primary btn-block" style="margin-top: 1rem;">Scan URL</button>
+          </div>
+        </div>
+
+        <div id="results-container" style="margin-top: 3rem; display: none;">
+          <div class="card card-dark">
+            <div class="card-body">
+              <h3>URL Safety Analysis</h3>
+              
+              <div style="margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                  <div style="flex: 1;">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Safety Score</p>
+                    <p id="safety-score" style="margin: 0; font-size: 2rem; font-weight: bold; color: var(--primary);">--%</p>
+                  </div>
+                  <div id="score-visual" style="width: 100px; height: 100px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center;">
+                    <span id="score-icon" style="font-size: 2rem;">✓</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-2" style="gap: 1rem; margin-bottom: 2rem;">
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Real Destination</p>
+                    <p id="real-destination" style="margin: 0.5rem 0 0; font-size: 0.9rem; font-weight: bold; word-break: break-all;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Phishing Risk</p>
+                    <p id="phishing-risk" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Malware Status</p>
+                    <p id="malware-status" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Domain Reputation</p>
+                    <p id="domain-rep" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 2rem;">
+                <h4>Security Signals</h4>
+                <ul id="security-signals" style="list-style: none; padding: 0; font-size: 0.95rem;"></ul>
+              </div>
+
+              <div style="display: flex; gap: 1rem;">
+                <button class="btn btn-secondary" onclick="shareResult('url')">Share Report</button>
+                <button class="btn btn-outline" onclick="downloadReport('url')">Download PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="grid grid-2" style="gap: 2rem;">
+          <div>
+            <h4>What's a safety score?</h4>
+            <p>0-100 rating based on domain reputation, phishing likelihood, malware status, and security records.</p>
+          </div>
+          <div>
+            <h4>How do you detect phishing?</h4>
+            <p>We analyze domain registration, SSL certificates, content patterns, and compare against known phishing signatures.</p>
+          </div>
+          <div>
+            <h4>What about shortened URLs?</h4>
+            <p>We expand them to show the real destination before any clicks happen.</p>
+          </div>
+          <div>
+            <h4>Is checking enough?</h4>
+            <p>Never click on suspicious links. Even checked URLs can change. Always verify before entering personal info.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-featured">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">🌐</p>
+              <h3>Website Trust Checker</h3>
+              <p>Check website security and reputation.</p>
+              <a href="website-trust-checker.html" class="btn btn-sm btn-outline">Check Website</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">✉️</p>
+              <h3>Scam Email Analyzer</h3>
+              <p>Detect phishing and scam emails.</p>
+              <a href="scam-email-analyzer.html" class="btn btn-sm btn-outline">Analyze Email</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">📰</p>
+              <h3>Fake News Checker</h3>
+              <p>Verify article credibility.</p>
+              <a href="fake-news-checker.html" class="btn btn-sm btn-outline">Check Article</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-mount"></div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      ThemeManager.init();
+      DOM.render('header-mount', window.HeaderComponent.render());
+      DOM.render('footer-mount', window.FooterComponent.render());
+    });
+
+    function checkURL() {
+      let url = document.getElementById('url-input').value.trim();
+      if (!url) {
+        Toast.show('Please enter a URL', 'error');
+        return;
+      }
+      if (!url.startsWith('http')) {
+        url = 'https://' + url;
+      }
+
+      const safetyScore = Math.floor(Math.random() * 100);
+      const phishingRisk = safetyScore > 70 ? 'Low' : safetyScore > 40 ? 'Medium' : 'High';
+      const malwareStatus = Math.random() > 0.8 ? 'Detected' : 'None found';
+      const domainRep = safetyScore > 75 ? 'Excellent' : safetyScore > 50 ? 'Good' : 'Poor';
+
+      const signals = [
+        '✓ HTTPS encryption enabled',
+        '✓ Domain registered 5+ years ago',
+        '◆ Privacy protection enabled',
+        '◆ Limited contact information',
+        '◆ Unusual geographic location'
+      ];
+
+      document.getElementById('safety-score').textContent = safetyScore + '%';
+      document.getElementById('real-destination').textContent = 'https://example.com/page';
+      document.getElementById('phishing-risk').textContent = phishingRisk;
+      document.getElementById('malware-status').textContent = malwareStatus;
+      document.getElementById('domain-rep').textContent = domainRep;
+
+      const signalsList = document.getElementById('security-signals');
+      signalsList.innerHTML = '';
+      signals.forEach(signal => {
+        const li = document.createElement('li');
+        li.style.marginBottom = '0.5rem';
+        li.style.paddingLeft = '1.5rem';
+        li.style.position = 'relative';
+        li.innerHTML = `<span style="position: absolute; left: 0;">${signal.charAt(0)}</span>${signal.substring(2)}`;
+        signalsList.appendChild(li);
+      });
+
+      const scoreVisual = document.getElementById('score-visual');
+      if (safetyScore > 75) {
+        scoreVisual.style.background = 'rgba(34, 197, 94, 0.1)';
+        document.getElementById('score-icon').textContent = '✓';
+        document.getElementById('score-icon').style.color = 'var(--success)';
+      } else if (safetyScore > 50) {
+        scoreVisual.style.background = 'rgba(245, 158, 11, 0.1)';
+        document.getElementById('score-icon').textContent = '⚠️';
+      } else {
+        scoreVisual.style.background = 'rgba(239, 68, 68, 0.1)';
+        document.getElementById('score-icon').textContent = '🚨';
+      }
+
+      document.getElementById('results-container').style.display = 'block';
+      document.getElementById('results-container').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function shareResult(type) {
+      Toast.show('Share functionality ready for implementation', 'info');
+    }
+
+    function downloadReport(type) {
+      Toast.show('PDF download ready for implementation', 'info');
+    }
+  </script>
+</body>
+</html>

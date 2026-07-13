@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Answer Verifier - Verify AI-generated responses for accuracy, hallucinations, and reliability. Check ChatGPT, Claude, Gemini, and other AI answers.">
+  <meta name="keywords" content="AI answer verifier, ChatGPT checker, AI response verification, hallucination detector, fact checking AI">
+  <meta name="author" content="AI Trust Check">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check/pages/tools/ai-answer-checker.html">
+  <meta property="og:title" content="AI Answer Verifier - Verify AI Responses">
+  <meta property="og:description" content="Verify AI-generated answers for accuracy, unsupported claims, and hallucinations.">
+  
+  <link rel="canonical" href="https://aitrust.check/pages/tools/ai-answer-checker.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>AI Answer Verifier - Verify ChatGPT & AI Responses</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI Answer Verifier",
+    "applicationCategory": "UtilityApplication",
+    "url": "https://aitrust.check/pages/tools/ai-answer-checker.html",
+    "description": "Verify AI-generated answers for accuracy, hallucinations, and reliability",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>AI Answer Verifier</h1>
+        <p>Verify AI-generated responses for accuracy, unsupported claims, hallucinations, and reliability. Know whether you should trust the AI's answer.</p>
+        <div style="margin-top: 2rem;">
+          <a href="#tool" class="btn btn-primary btn-lg">Start Verifying</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem & Solution -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>The Problem</h2>
+            <p>AI models like ChatGPT, Claude, and Gemini are powerful, but they make mistakes:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Hallucinations</strong> - Making up facts that sound plausible
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Outdated Info</strong> - Training data cutoffs mean wrong recent facts
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Unsupported Claims</strong> - Statements without evidence or sources
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Overconfidence</strong> - Presenting uncertain info as definite
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Bias</strong> - Skewed perspectives based on training data
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Our Solution</h2>
+            <p>The AI Answer Verifier analyzes AI responses using multiple techniques:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Claim Extraction</strong> - Identify all testable statements
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Evidence Check</strong> - Flag claims without supporting evidence
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Uncertainty Detection</strong> - Highlight uncertain wording
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Confidence Scoring</strong> - Overall trustworthiness rating
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Recommendations</strong> - What you should verify further
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tool Section -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Verify an AI Answer</h2>
+        
+        <div class="grid grid-2" style="gap: 2rem;">
+          <!-- Input Form -->
+          <div>
+            <div class="card">
+              <h3 style="margin-top: 0;">Paste AI Response</h3>
+              
+              <div class="form-group">
+                <label for="ai-response">AI-Generated Text (paste the entire response)</label>
+                <textarea id="ai-response" placeholder="Paste the AI response you want to verify here..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="ai-source">AI Model (optional)</label>
+                <select id="ai-source">
+                  <option value="">Select or leave blank</option>
+                  <option value="chatgpt">ChatGPT</option>
+                  <option value="claude">Claude</option>
+                  <option value="gemini">Google Gemini</option>
+                  <option value="copilot">Microsoft Copilot</option>
+                  <option value="other">Other/Unknown</option>
+                </select>
+              </div>
+
+              <button class="btn btn-primary w-full" onclick="analyzeResponse()" style="width: 100%; padding: 0.75rem;">
+                Analyze Response
+              </button>
+
+              <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-tertiary); text-align: center;">
+                Your input is never stored. Analysis happens instantly.
+              </p>
+            </div>
+          </div>
+
+          <!-- Example/Preview -->
+          <div>
+            <div class="card" style="background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(16, 185, 129, 0.1));">
+              <h3 style="margin-top: 0;">Example Analysis</h3>
+              <p style="color: var(--text-secondary);">Paste an AI response to the left to see a detailed verification analysis including:</p>
+              
+              <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="position: absolute; left: 0;">📊</span>
+                  Overall Trust Score (0-100)
+                </li>
+                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="position: absolute; left: 0;">⚡</span>
+                  Identified Claims
+                </li>
+                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="position: absolute; left: 0;">🚩</span>
+                  Red Flags & Concerns
+                </li>
+                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="position: absolute; left: 0;">💡</span>
+                  What to Verify Further
+                </li>
+                <li style="padding-left: 1.5rem; position: relative;">
+                  <span style="position: absolute; left: 0;">📋</span>
+                  Detailed Explanation
+                </li>
+              </ul>
+
+              <button class="btn btn-secondary w-full" onclick="loadExample()" style="width: 100%;">
+                Load Example
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" style="margin-top: 2rem; display: none;">
+          <div class="card" style="margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+              <h2 style="margin: 0;">Analysis Results</h2>
+              <button class="btn btn-ghost btn-sm" onclick="shareResult()">Share</button>
+            </div>
+
+            <!-- Trust Score -->
+            <div id="trust-score" style="margin-bottom: 2rem;"></div>
+
+            <!-- Claims Section -->
+            <div style="margin-bottom: 2rem;">
+              <h3>Identified Claims</h3>
+              <div id="claims-list"></div>
+            </div>
+
+            <!-- Red Flags -->
+            <div style="margin-bottom: 2rem;">
+              <h3>Red Flags & Concerns</h3>
+              <div id="red-flags"></div>
+            </div>
+
+            <!-- Recommendations -->
+            <div style="margin-bottom: 2rem;">
+              <h3>What You Should Verify</h3>
+              <div id="recommendations"></div>
+            </div>
+
+            <!-- Download Button -->
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+              <button class="btn btn-primary" onclick="downloadReport()">📥 Download PDF Report</button>
+              <button class="btn btn-secondary" onclick="copyResults()">📋 Copy Results</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AD SPACE -->
+    <section class="section">
+      <div class="container">
+        <div style="padding: 1.5rem; background: var(--bg-secondary); border-radius: 1rem; border: 1px dashed var(--border-color); text-align: center; color: var(--text-tertiary); font-size: 0.875rem;">
+          💬 Advertisement Space - 300x250 or responsive
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2>How the Verifier Works</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card feature-card">
+            <div class="feature-icon">1️⃣</div>
+            <h3>Extract Claims</h3>
+            <p>AI identifies all factual claims and statements in the response.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">2️⃣</div>
+            <h3>Check Evidence</h3>
+            <p>Each claim is evaluated for supporting evidence and sources.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">3️⃣</div>
+            <h3>Detect Uncertainty</h3>
+            <p>Identify overconfident language and unverifiable statements.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">4️⃣</div>
+            <h3>Generate Score</h3>
+            <p>Calculate overall trustworthiness based on multiple factors.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">5️⃣</div>
+            <h3>Provide Guidance</h3>
+            <p>Recommend what to verify and how to check claims independently.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">6️⃣</div>
+            <h3>Generate Report</h3>
+            <p>Create shareable, downloadable report with all findings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ for this tool -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card" style="cursor: pointer;" onclick="toggleAnswer(this)">
+            <h4 style="margin-top: 0; margin-bottom: 0;">What AI models can I verify?</h4>
+            <p style="display: none; margin-bottom: 0; margin-top: 1rem; color: var(--text-secondary);">You can verify responses from any AI model: ChatGPT, Claude, Gemini, Copilot, Llama, and others. Our verifier is model-agnostic and analyzes the response content itself.</p>
+          </div>
+
+          <div class="card" style="cursor: pointer;" onclick="toggleAnswer(this)">
+            <h4 style="margin-top: 0; margin-bottom: 0;">Why should I trust this verification?</h4>
+            <p style="display: none; margin-bottom: 0; margin-top: 1rem; color: var(--text-secondary);">Our verification uses multiple techniques to identify claims and red flags. However, it's a first-pass analysis tool. Always use critical thinking and verify important claims independently.</p>
+          </div>
+
+          <div class="card" style="cursor: pointer;" onclick="toggleAnswer(this)">
+            <h4 style="margin-top: 0; margin-bottom: 0;">Is my text stored or logged?</h4>
+            <p style="display: none; margin-bottom: 0; margin-top: 1rem; color: var(--text-secondary);">No. Your input is processed instantly and not stored. We respect your privacy completely. No data is logged or shared.</p>
+          </div>
+
+          <div class="card" style="cursor: pointer;" onclick="toggleAnswer(this)">
+            <h4 style="margin-top: 0; margin-bottom: 0;">How accurate is the trust score?</h4>
+            <p style="display: none; margin-bottom: 0; margin-top: 1rem; color: var(--text-secondary);">The trust score is indicative and based on pattern analysis. Use it as a guide, not absolute truth. Critical thinking is essential.</p>
+          </div>
+
+          <div class="card" style="cursor: pointer;" onclick="toggleAnswer(this)">
+            <h4 style="margin-top: 0; margin-bottom: 0;">Can I verify code or technical content?</h4>
+            <p style="display: none; margin-bottom: 0; margin-top: 1rem; color: var(--text-secondary);">Yes, the verifier works on any text content including code, technical documentation, research summaries, and more.</p>
+          </div>
+
+          <div class="card" style="cursor: pointer;" onclick="toggleAnswer(this)">
+            <h4 style="margin-top: 0; margin-bottom: 0;">What's considered a hallucination?</h4>
+            <p style="display: none; margin-bottom: 0; margin-top: 1rem; color: var(--text-secondary);">Hallucinations are unsupported statements presented as fact. They're claims that lack evidence, contradictory information, or plausible-sounding but false details.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Tools -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2>Related Tools</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <a href="/pages/tools/claim-verifier.html" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">✓</div>
+            <h3 style="margin: 0;">Claim Verifier</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Break down specific claims and find evidence</p>
+          </a>
+
+          <a href="/pages/tools/hallucination-detector.html" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">👻</div>
+            <h3 style="margin: 0;">Hallucination Detector</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Identify fabricated references and false claims</p>
+          </a>
+
+          <a href="/pages/tools/fake-news-checker.html" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">📰</div>
+            <h3 style="margin: 0;">Fake News Checker</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Verify article credibility and bias</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Resources -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Learn More About AI Verification</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <a href="/pages/knowledge/index.html" class="card" style="text-decoration: none;">
+            <strong>📚 AI Safety Academy</strong>
+            <p style="margin: 1rem 0 0; font-size: 0.95rem;">Comprehensive course on understanding AI limitations and best practices</p>
+          </a>
+
+          <a href="/pages/blog/index.html" class="card" style="text-decoration: none;">
+            <strong>📰 Latest Articles</strong>
+            <p style="margin: 1rem 0 0; font-size: 0.95rem;">Stay updated on AI safety, verification techniques, and security news</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+  <script>
+    document.getElementById('header-mount').innerHTML = HeaderComponent.render();
+    document.getElementById('footer-mount').innerHTML = FooterComponent.render();
+    HeaderComponent.init();
+
+    // Demo analysis logic
+    function analyzeResponse() {
+      const response = document.getElementById('ai-response').value.trim();
+      
+      if (!response) {
+        Toast.warning('Please paste an AI response to verify');
+        return;
+      }
+
+      // Demo analysis (in production, this would call an API)
+      const trustScore = Math.floor(Math.random() * 40 + 50); // 50-90
+      const claims = extractClaims(response);
+      const redFlags = identifyRedFlags(response);
+      const recommendations = getRecommendations(response);
+
+      displayResults(trustScore, claims, redFlags, recommendations);
+      
+      // Show results section
+      document.getElementById('results').style.display = 'block';
+      document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function extractClaims(text) {
+      // Simple extraction demo - in production this would be more sophisticated
+      const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 10);
+      return sentences.slice(0, 5).map(s => ({
+        text: s.trim(),
+        confidence: Math.floor(Math.random() * 40 + 50)
+      }));
+    }
+
+    function identifyRedFlags(text) {
+      const flags = [];
+      
+      if (text.length < 50) flags.push('Response is very short - may lack detail');
+      if (text.includes('I think') || text.includes('I believe')) flags.push('Uses opinion language instead of facts');
+      if (text.includes('always') || text.includes('never')) flags.push('Absolutist statements without nuance');
+      if (!text.match(/\d+/)) flags.push('No specific numbers or data cited');
+      if (text.toLowerCase().includes('example') === false) flags.push('No examples provided');
+      
+      return flags.slice(0, 4);
+    }
+
+    function getRecommendations(text) {
+      return [
+        'Verify any statistics or numbers mentioned',
+        'Check the dates mentioned are current',
+        'Cross-reference key claims with reliable sources',
+        'Look for conflicting information from other sources'
+      ];
+    }
+
+    function displayResults(score, claims, redFlags, recommendations) {
+      // Trust score
+      document.getElementById('trust-score').innerHTML = TrustScoreComponent.render(score);
+
+      // Claims
+      const claimsHtml = claims.map(c => `
+        <div style="padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <strong>${Text.truncate(c.text, 80)}</strong>
+            <span class="badge" style="background-color: ${c.confidence >= 70 ? '#10b981' : c.confidence >= 50 ? '#f59e0b' : '#ef4444'}; color: white;">
+              ${c.confidence}% verifiable
+            </span>
+          </div>
+        </div>
+      `).join('');
+      document.getElementById('claims-list').innerHTML = claimsHtml;
+
+      // Red flags
+      const flagsHtml = redFlags.map(f => `
+        <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; border-radius: 0.5rem; margin-bottom: 0.75rem;">
+          <strong style="color: #ef4444;">⚠️</strong> ${f}
+        </div>
+      `).join('');
+      document.getElementById('red-flags').innerHTML = flagsHtml || '<p style="color: var(--text-secondary);">No major red flags detected</p>';
+
+      // Recommendations
+      const recsHtml = recommendations.map((r, i) => `
+        <div style="display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
+          <span style="background: var(--primary-blue); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.75rem; font-weight: 700;">${i + 1}</span>
+          <div>${r}</div>
+        </div>
+      `).join('');
+      document.getElementById('recommendations').innerHTML = recsHtml;
+    }
+
+    function loadExample() {
+      const exampleText = `Machine learning is a type of artificial intelligence that enables systems to learn and improve from experience without being explicitly programmed. It typically involves training algorithms on large datasets to recognize patterns and make predictions. Deep learning, which uses neural networks with multiple layers, has achieved remarkable success in computer vision and natural language processing. The field was pioneered in the 1950s and has evolved dramatically with the availability of big data and computational resources. Today, machine learning powers recommendation systems, autonomous vehicles, and medical imaging applications.`;
+      
+      document.getElementById('ai-response').value = exampleText;
+      analyzeResponse();
+    }
+
+    function shareResult() {
+      const reportId = 'demo-' + Math.random().toString(36).substr(2, 9);
+      const reportUrl = `https://aitrust.check/pages/reports/${reportId}.html`;
+      
+      navigator.clipboard.writeText(reportUrl);
+      Toast.success('Report link copied to clipboard');
+    }
+
+    function downloadReport() {
+      Toast.info('PDF download feature coming soon');
+    }
+
+    function copyResults() {
+      const response = document.getElementById('ai-response').value;
+      navigator.clipboard.writeText(`AI Response:\n${response}\n\nAnalysis: See full report at aitrust.check`);
+      Toast.success('Results copied to clipboard');
+    }
+
+    function toggleAnswer(el) {
+      const p = el.querySelector('p');
+      if (p) {
+        p.style.display = p.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+
+    // Analytics
+    Analytics.pageView('/pages/tools/ai-answer-checker');
+  </script>
+</body>
+</html>

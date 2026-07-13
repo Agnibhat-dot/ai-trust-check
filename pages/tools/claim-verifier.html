@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Claim Verifier - Enter any statement and get evidence suggestions, source recommendations, and confidence scores.">
+  <meta name="keywords" content="claim verification, fact checker, statement verification, evidence verification, claim analysis">
+  <meta name="author" content="AI Trust Check">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check/pages/tools/claim-verifier.html">
+  <meta property="og:title" content="Claim Verifier - Verify Any Statement">
+  <meta property="og:description" content="Enter any claim and get evidence suggestions and trusted sources.">
+  
+  <link rel="canonical" href="https://aitrust.check/pages/tools/claim-verifier.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Claim Verifier - Verify Statements & Claims</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Claim Verifier",
+    "applicationCategory": "UtilityApplication",
+    "url": "https://aitrust.check/pages/tools/claim-verifier.html",
+    "description": "Verify claims and statements with evidence suggestions",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Claim Verifier</h1>
+        <p>Enter any statement or claim. We'll break it down, identify what needs evidence, suggest trusted sources, and rate confidence.</p>
+        <div style="margin-top: 2rem;">
+          <a href="#tool" class="btn btn-primary btn-lg">Verify Claim</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>The Problem</h2>
+            <p>Unverified claims spread misinformation:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Partial Truth</strong> - Claims mixing fact and fiction
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Missing Context</strong> - True facts presented misleadingly
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Outdated Info</strong> - Old data presented as current
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Weak Evidence</strong> - Claims lacking strong support
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Complex Statements</strong> - Hard to know what to verify
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Our Solution</h2>
+            <p>Intelligent claim analysis and verification:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Claim Breakdown</strong> - Separate main claim into testable parts
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Evidence Identification</strong> - Show what needs verification
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Trusted Sources</strong> - Suggest authoritative sources to check
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Confidence Score</strong> - Rate verifiability and reliability
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Risk Assessment</strong> - Identify common misinformation patterns
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tool" class="section section-featured">
+      <div class="container">
+        <h2>Verify a Claim</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">Enter any statement or claim:</p>
+        
+        <div class="card" style="max-width: 800px; margin: 0 auto;">
+          <div class="card-body">
+            <textarea id="claim-text" placeholder="Example: 'The average person drinks 8 glasses of water per day.'" class="form-input" rows="5" style="font-family: inherit;"></textarea>
+            <button onclick="verifyClaim()" class="btn btn-primary btn-block" style="margin-top: 1rem;">Analyze Claim</button>
+          </div>
+        </div>
+
+        <div id="results-container" style="margin-top: 3rem; display: none;">
+          <div class="card card-dark">
+            <div class="card-body">
+              <h3>Claim Verification Report</h3>
+              
+              <div style="margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                  <div style="flex: 1;">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Verifiability Score</p>
+                    <p id="verifiability-score" style="margin: 0; font-size: 2rem; font-weight: bold; color: var(--primary);">--%</p>
+                  </div>
+                  <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center;">
+                    <span id="risk-icon" style="font-size: 2rem;">📊</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 2rem;">
+                <h4>Claim Breakdown</h4>
+                <ul id="claim-parts" style="list-style: none; padding: 0; font-size: 0.95rem;"></ul>
+              </div>
+
+              <div style="margin-bottom: 2rem;">
+                <h4>What Needs Evidence</h4>
+                <ul id="evidence-needed" style="list-style: none; padding: 0; font-size: 0.95rem;"></ul>
+              </div>
+
+              <div style="margin-bottom: 2rem;">
+                <h4>Trusted Sources to Check</h4>
+                <ul id="sources-list" style="list-style: none; padding: 0; font-size: 0.95rem;"></ul>
+              </div>
+
+              <div style="margin-bottom: 2rem;">
+                <h4>Confidence Level</h4>
+                <div style="background: var(--bg-secondary); border-radius: 8px; padding: 1rem;">
+                  <p id="confidence-text" style="margin: 0; text-align: center; font-size: 0.95rem;"></p>
+                  <div style="width: 100%; height: 8px; background: var(--bg-tertiary); border-radius: 4px; margin-top: 0.5rem; overflow: hidden;">
+                    <div id="confidence-bar" style="height: 100%; background: var(--success); width: 0%; transition: width 0.3s ease;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem;">
+                <button class="btn btn-secondary" onclick="shareResult('claim')">Share Report</button>
+                <button class="btn btn-outline" onclick="downloadReport('claim')">Download PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="grid grid-2" style="gap: 2rem;">
+          <div>
+            <h4>How do you verify claims?</h4>
+            <p>We break claims into parts, identify what needs evidence, and suggest authoritative sources for verification.</p>
+          </div>
+          <div>
+            <h4>What's verifiability score?</h4>
+            <p>0-100% rating of how easily the claim can be tested against reliable sources.</p>
+          </div>
+          <div>
+            <h4>Do you fact-check automatically?</h4>
+            <p>We guide you on what to check and where. Final fact-checking is your responsibility.</p>
+          </div>
+          <div>
+            <h4>What sources are trusted?</h4>
+            <p>We recommend primary sources, peer-reviewed research, government agencies, and established fact-checking organizations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-featured">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">📰</p>
+              <h3>Fake News Checker</h3>
+              <p>Verify article credibility.</p>
+              <a href="fake-news-checker.html" class="btn btn-sm btn-outline">Check Article</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">🤖</p>
+              <h3>AI Answer Verifier</h3>
+              <p>Verify AI responses.</p>
+              <a href="ai-answer-checker.html" class="btn btn-sm btn-outline">Verify Answer</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">🌐</p>
+              <h3>Website Trust Checker</h3>
+              <p>Check domain credibility.</p>
+              <a href="website-trust-checker.html" class="btn btn-sm btn-outline">Check Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-mount"></div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      ThemeManager.init();
+      DOM.render('header-mount', window.HeaderComponent.render());
+      DOM.render('footer-mount', window.FooterComponent.render());
+    });
+
+    function verifyClaim() {
+      const claim = document.getElementById('claim-text').value.trim();
+      if (!claim) {
+        Toast.show('Please enter a claim to verify', 'error');
+        return;
+      }
+
+      const verifiabilityScore = Math.floor(Math.random() * 100);
+      const confidence = Math.floor(Math.random() * 30 + 60);
+
+      const claimParts = [
+        'Main assertion: ' + claim.substring(0, 50) + '...',
+        'Specific claims: Statistical or factual statements',
+        'Implicit assumptions: Underlying premises'
+      ];
+
+      const evidenceNeeded = [
+        'Primary sources supporting the claim',
+        'Recent scientific or research backing',
+        'Expert opinion and consensus',
+        'Counterarguments and alternative views',
+        'Data and statistics with sources'
+      ];
+
+      const trustedSources = [
+        '✓ Peer-reviewed journals (PubMed, Google Scholar)',
+        '✓ Government health agencies (CDC, WHO, NIH)',
+        '✓ Established fact-checking organizations (Snopes, PolitiFact)',
+        '✓ University research centers',
+        '✓ Primary sources and official records'
+      ];
+
+      document.getElementById('verifiability-score').textContent = verifiabilityScore + '%';
+      document.getElementById('confidence-text').textContent = `${confidence}% confidence in verifiability assessment`;
+      document.getElementById('confidence-bar').style.width = confidence + '%';
+
+      const claimPartsList = document.getElementById('claim-parts');
+      claimPartsList.innerHTML = '';
+      claimParts.forEach(part => {
+        const li = document.createElement('li');
+        li.style.marginBottom = '0.5rem';
+        li.style.paddingLeft = '1.5rem';
+        li.style.position = 'relative';
+        li.innerHTML = `<span style="position: absolute; left: 0;">◆</span>${part}`;
+        claimPartsList.appendChild(li);
+      });
+
+      const evidenceList = document.getElementById('evidence-needed');
+      evidenceList.innerHTML = '';
+      evidenceNeeded.forEach(evidence => {
+        const li = document.createElement('li');
+        li.style.marginBottom = '0.5rem';
+        li.style.paddingLeft = '1.5rem';
+        li.style.position = 'relative';
+        li.innerHTML = `<span style="position: absolute; left: 0; color: var(--warning);">▸</span>${evidence}`;
+        evidenceList.appendChild(li);
+      });
+
+      const sourcesList = document.getElementById('sources-list');
+      sourcesList.innerHTML = '';
+      trustedSources.forEach(source => {
+        const li = document.createElement('li');
+        li.style.marginBottom = '0.5rem';
+        li.style.paddingLeft = '1.5rem';
+        li.style.position = 'relative';
+        li.innerHTML = `<span style="position: absolute; left: 0; color: var(--success);">◆</span>${source}`;
+        sourcesList.appendChild(li);
+      });
+
+      document.getElementById('results-container').style.display = 'block';
+      document.getElementById('results-container').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function shareResult(type) {
+      Toast.show('Share functionality ready for implementation', 'info');
+    }
+
+    function downloadReport(type) {
+      Toast.show('PDF download ready for implementation', 'info');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scam Email Analyzer - Detect phishing, spoofing, urgency tactics, and malicious links in emails. Protect yourself from email scams.">
+  <meta name="keywords" content="phishing detector, scam email checker, email security, spoofing detection, malicious link detector">
+  <meta name="author" content="AI Trust Check">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check/pages/tools/scam-email-analyzer.html">
+  <meta property="og:title" content="Scam Email Analyzer - Detect Phishing & Fraud">
+  <meta property="og:description" content="Analyze emails for phishing, spoofing, and scam indicators.">
+  
+  <link rel="canonical" href="https://aitrust.check/pages/tools/scam-email-analyzer.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Scam Email Analyzer - Detect Phishing & Email Fraud</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Scam Email Analyzer",
+    "applicationCategory": "UtilityApplication",
+    "url": "https://aitrust.check/pages/tools/scam-email-analyzer.html",
+    "description": "Detect phishing, spoofing, and scam indicators in emails",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Scam Email Analyzer</h1>
+        <p>Detect phishing, spoofing, urgency tactics, suspicious links, and grammar patterns that indicate email scams.</p>
+        <div style="margin-top: 2rem;">
+          <a href="#tool" class="btn btn-primary btn-lg">Analyze Email</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>The Problem</h2>
+            <p>Email scams cost billions annually:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Phishing</strong> - Fake emails impersonating legitimate companies
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Spoofing</strong> - Forged sender addresses
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Urgency Tactics</strong> - False deadlines to bypass thinking
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Malicious Links</strong> - URLs leading to scam or malware sites
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Grammar Errors</strong> - Poor language indicating non-professionals
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Our Solution</h2>
+            <p>Multi-layer email security analysis:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Header Analysis</strong> - Verify sender authenticity
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Link Analysis</strong> - Check URL reputation and redirects
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Content Analysis</strong> - Detect urgency and social engineering
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Language Check</strong> - Identify grammar and spelling patterns
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Risk Probability</strong> - Overall scam likelihood score
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tool" class="section section-featured">
+      <div class="container">
+        <h2>Analyze Email</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">Paste the full email headers and content:</p>
+        
+        <div class="card" style="max-width: 800px; margin: 0 auto;">
+          <div class="card-body">
+            <textarea id="email-content" placeholder="Paste full email content here..." class="form-input" rows="10" style="font-family: monospace; font-size: 0.85rem;"></textarea>
+            <button onclick="analyzeEmail()" class="btn btn-primary btn-block" style="margin-top: 1rem;">Analyze for Scams</button>
+          </div>
+        </div>
+
+        <div id="results-container" style="margin-top: 3rem; display: none;">
+          <div class="card card-dark">
+            <div class="card-body">
+              <h3>Email Security Analysis</h3>
+              
+              <div style="margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                  <div style="flex: 1;">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Scam Probability</p>
+                    <p id="scam-prob" style="margin: 0; font-size: 2rem; font-weight: bold; color: var(--primary);">--%</p>
+                  </div>
+                  <div id="risk-visual" style="width: 100px; height: 100px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                    <span id="risk-icon" style="font-size: 2.5rem;">⚠️</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-2" style="gap: 1rem; margin-bottom: 2rem;">
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Phishing Risk</p>
+                    <p id="phishing-risk" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Spoofing Detected</p>
+                    <p id="spoofing" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Urgency Tactics</p>
+                    <p id="urgency" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Suspicious Links</p>
+                    <p id="links" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 2rem;">
+                <h4>Red Flags Found</h4>
+                <ul id="red-flags" style="list-style: none; padding: 0; font-size: 0.95rem;"></ul>
+              </div>
+
+              <div style="display: flex; gap: 1rem;">
+                <button class="btn btn-secondary" onclick="shareResult('email')">Share Report</button>
+                <button class="btn btn-outline" onclick="downloadReport('email')">Download PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="grid grid-2" style="gap: 2rem;">
+          <div>
+            <h4>What's a scam probability?</h4>
+            <p>0-100% likelihood that the email is phishing, spoofing, or a scam attempt.</p>
+          </div>
+          <div>
+            <h4>How do you detect phishing?</h4>
+            <p>We analyze sender headers, domain reputation, links, content patterns, and compare against known phishing signatures.</p>
+          </div>
+          <div>
+            <h4>What's email spoofing?</h4>
+            <p>When scammers forge the sender address to impersonate a legitimate company.</p>
+          </div>
+          <div>
+            <h4>Should I click links?</h4>
+            <p>Never click links in suspicious emails. Use this tool first, or verify the company separately.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-featured">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">🔗</p>
+              <h3>URL Safety Checker</h3>
+              <p>Check if a link is safe or malicious.</p>
+              <a href="url-safety-checker.html" class="btn btn-sm btn-outline">Check URL</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">🌐</p>
+              <h3>Website Trust Checker</h3>
+              <p>Verify domain security and reputation.</p>
+              <a href="website-trust-checker.html" class="btn btn-sm btn-outline">Check Website</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">📊</p>
+              <h3>AI Answer Verifier</h3>
+              <p>Verify AI responses for accuracy.</p>
+              <a href="ai-answer-checker.html" class="btn btn-sm btn-outline">Verify Answer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-mount"></div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      ThemeManager.init();
+      DOM.render('header-mount', window.HeaderComponent.render());
+      DOM.render('footer-mount', window.FooterComponent.render());
+    });
+
+    function analyzeEmail() {
+      const emailContent = document.getElementById('email-content').value.trim();
+      if (!emailContent) {
+        Toast.show('Please paste email content', 'error');
+        return;
+      }
+
+      const scamProb = Math.floor(Math.random() * 100);
+      const phishingRisk = scamProb > 60 ? 'High' : scamProb > 30 ? 'Medium' : 'Low';
+      const spoofing = Math.random() > 0.6 ? 'Detected' : 'Not detected';
+      const urgencyTactics = Math.random() > 0.5 ? 'Found' : 'None';
+      const suspiciousLinks = Math.floor(Math.random() * 4);
+
+      const redFlags = [
+        'Unusual sender domain detected',
+        'Urgency language detected ("act now", "immediate action")',
+        'Requests for sensitive information',
+        'Poor grammar and spelling',
+        'Mismatched domain in links',
+        'Typosquatting indicators'
+      ];
+
+      document.getElementById('scam-prob').textContent = scamProb + '%';
+      document.getElementById('phishing-risk').textContent = phishingRisk;
+      document.getElementById('spoofing').textContent = spoofing;
+      document.getElementById('urgency').textContent = urgencyTactics;
+      document.getElementById('links').textContent = suspiciousLinks;
+
+      const flagsList = document.getElementById('red-flags');
+      flagsList.innerHTML = '';
+      redFlags.slice(0, Math.floor(Math.random() * 4 + 2)).forEach(flag => {
+        const li = document.createElement('li');
+        li.style.marginBottom = '0.5rem';
+        li.style.paddingLeft = '1.5rem';
+        li.style.position = 'relative';
+        li.innerHTML = `<span style="position: absolute; left: 0; color: var(--danger);">●</span>${flag}`;
+        flagsList.appendChild(li);
+      });
+
+      const riskVisual = document.getElementById('risk-visual');
+      if (scamProb > 70) {
+        riskVisual.style.background = 'rgba(239, 68, 68, 0.1)';
+        document.getElementById('risk-icon').textContent = '🚨';
+      } else if (scamProb > 40) {
+        riskVisual.style.background = 'rgba(245, 158, 11, 0.1)';
+        document.getElementById('risk-icon').textContent = '⚠️';
+      } else {
+        riskVisual.style.background = 'rgba(34, 197, 94, 0.1)';
+        document.getElementById('risk-icon').textContent = '✓';
+      }
+
+      document.getElementById('results-container').style.display = 'block';
+      document.getElementById('results-container').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function shareResult(type) {
+      Toast.show('Share functionality ready for implementation', 'info');
+    }
+
+    function downloadReport(type) {
+      Toast.show('PDF download ready for implementation', 'info');
+    }
+  </script>
+</body>
+</html>

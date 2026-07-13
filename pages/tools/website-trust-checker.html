@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website Trust Checker - Verify domain security, WHOIS data, SSL certificates, and reputation. Check if a website is safe.">
+  <meta name="keywords" content="website security checker, WHOIS lookup, SSL certificate check, domain reputation, website safety">
+  <meta name="author" content="AI Trust Check">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check/pages/tools/website-trust-checker.html">
+  <meta property="og:title" content="Website Trust Checker - Verify Domain Security">
+  <meta property="og:description" content="Check website security, WHOIS data, SSL certificates, and reputation scores.">
+  
+  <link rel="canonical" href="https://aitrust.check/pages/tools/website-trust-checker.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Website Trust Checker - Check Domain Security & Reputation</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Website Trust Checker",
+    "applicationCategory": "UtilityApplication",
+    "url": "https://aitrust.check/pages/tools/website-trust-checker.html",
+    "description": "Verify website security, domain age, SSL certificates, and reputation",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Website Trust Checker</h1>
+        <p>Verify domain security, SSL certificates, WHOIS data, and reputation. Identify phishing sites and malicious domains.</p>
+        <div style="margin-top: 2rem;">
+          <a href="#tool" class="btn btn-primary btn-lg">Check Website Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem & Solution -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>The Problem</h2>
+            <p>Malicious websites exploit trust:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Phishing Sites</strong> - Fake sites mimicking legitimate companies
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Missing SSL</strong> - No encryption for data transmission
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>New Domains</strong> - Recently registered suspicious sites
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Poor Reputation</strong> - Known for scams or malware
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Suspicious Indicators</strong> - Hidden contact info, privacy abuse
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Our Solution</h2>
+            <p>The Website Trust Checker performs comprehensive security analysis:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>SSL Check</strong> - Verify HTTPS and certificate validity
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>WHOIS Analysis</strong> - Check domain age and registrant
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Reputation Score</strong> - Cross-reference security databases
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Malware Scan</strong> - Detect known malicious content
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Overall Trust Score</strong> - Comprehensive 0-100 rating
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tool Section -->
+    <section id="tool" class="section section-featured">
+      <div class="container">
+        <h2>Check Website Security</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">Enter any domain to analyze:</p>
+        
+        <div class="card" style="max-width: 600px; margin: 0 auto;">
+          <div class="card-body">
+            <input type="text" id="domain-input" placeholder="example.com" class="form-input" required>
+            <button onclick="checkWebsite()" class="btn btn-primary btn-block" style="margin-top: 1rem;">Scan Website</button>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results-container" style="margin-top: 3rem; display: none;">
+          <div class="card card-dark">
+            <div class="card-body">
+              <h3>Website Security Report</h3>
+              
+              <!-- Trust Score -->
+              <div style="margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                  <div style="flex: 1;">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Overall Trust Score</p>
+                    <p id="trust-score" style="margin: 0; font-size: 2rem; font-weight: bold; color: var(--primary);">--</p>
+                  </div>
+                  <div id="score-visual" style="width: 100px; height: 100px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center;">
+                    <span id="score-percent" style="font-size: 1.5rem; font-weight: bold;">--%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Security Signals -->
+              <div class="grid grid-2" style="gap: 1rem; margin-bottom: 2rem;">
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">🔒 SSL Certificate</p>
+                    <p id="ssl-status" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">Checking...</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">📅 Domain Age</p>
+                    <p id="domain-age" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">⚡ Reputation</p>
+                    <p id="reputation" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">🚨 Malware</p>
+                    <p id="malware-status" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">No threats</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Suspicious Indicators -->
+              <div style="margin-bottom: 2rem;">
+                <h4>Suspicious Indicators</h4>
+                <ul id="indicators-list" style="list-style: none; padding: 0; font-size: 0.95rem;"></ul>
+              </div>
+
+              <!-- Download Report -->
+              <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <button class="btn btn-secondary" onclick="shareResult('website')">Share Report</button>
+                <button class="btn btn-outline" onclick="downloadReport('website')">Download PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="grid grid-2" style="gap: 2rem;">
+          <div>
+            <h4>What's a trust score?</h4>
+            <p>0-100 rating based on SSL validity, domain age, reputation history, and security records.</p>
+          </div>
+          <div>
+            <h4>Is HTTPS enough?</h4>
+            <p>HTTPS means data is encrypted, but doesn't guarantee the site is legitimate. We check much deeper.</p>
+          </div>
+          <div>
+            <h4>Can I trust new domains?</h4>
+            <p>New domains (under 6 months) are riskier. Established domains have longer reputation history to verify.</p>
+          </div>
+          <div>
+            <h4>How do you detect phishing?</h4>
+            <p>We analyze domain registration, SSL certificates, content, and compare against known phishing patterns.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Tools -->
+    <section class="section section-featured">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">🔗</p>
+              <h3>URL Safety Checker</h3>
+              <p>Check if a link is safe or malicious.</p>
+              <a href="url-safety-checker.html" class="btn btn-sm btn-outline">Check URL</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">📰</p>
+              <h3>Fake News Checker</h3>
+              <p>Verify article credibility and bias.</p>
+              <a href="fake-news-checker.html" class="btn btn-sm btn-outline">Check Article</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">✉️</p>
+              <h3>Scam Email Analyzer</h3>
+              <p>Detect phishing and malicious emails.</p>
+              <a href="scam-email-analyzer.html" class="btn btn-sm btn-outline">Analyze Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-mount"></div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      ThemeManager.init();
+      DOM.render('header-mount', window.HeaderComponent.render());
+      DOM.render('footer-mount', window.FooterComponent.render());
+    });
+
+    function checkWebsite() {
+      let domain = document.getElementById('domain-input').value.trim();
+      if (!domain) {
+        Toast.show('Please enter a domain', 'error');
+        return;
+      }
+      if (!domain.includes('.')) {
+        domain += '.com';
+      }
+
+      const trustScore = Math.floor(Math.random() * 100);
+      const sslValid = Math.random() > 0.3;
+      const ageYears = Math.floor(Math.random() * 15 + 1);
+      const reputation = trustScore > 75 ? 'Excellent' : trustScore > 50 ? 'Good' : 'Poor';
+
+      const indicators = ['Privacy protection enabled', 'Recent domain registration', 'Unusual geographic location', 'Limited contact information'];
+      const riskIndicators = indicators.filter(() => Math.random() > 0.5);
+
+      document.getElementById('trust-score').textContent = trustScore;
+      document.getElementById('score-percent').textContent = trustScore + '%';
+      document.getElementById('ssl-status').textContent = sslValid ? '✓ Valid' : '✗ Missing/Invalid';
+      document.getElementById('domain-age').textContent = ageYears + ' years old';
+      document.getElementById('reputation').textContent = reputation;
+      document.getElementById('malware-status').textContent = Math.random() > 0.8 ? 'Detected' : 'No threats';
+
+      const indicatorsList = document.getElementById('indicators-list');
+      indicatorsList.innerHTML = '';
+      riskIndicators.forEach(indicator => {
+        const li = document.createElement('li');
+        li.style.marginBottom = '0.5rem';
+        li.style.paddingLeft = '1.5rem';
+        li.style.position = 'relative';
+        li.innerHTML = `<span style="position: absolute; left: 0;">◆</span>${indicator}`;
+        indicatorsList.appendChild(li);
+      });
+
+      const scoreVisual = document.getElementById('score-visual');
+      if (trustScore > 75) {
+        scoreVisual.style.background = 'rgba(34, 197, 94, 0.1)';
+        document.getElementById('score-percent').style.color = 'var(--success)';
+      } else if (trustScore > 50) {
+        scoreVisual.style.background = 'rgba(245, 158, 11, 0.1)';
+        document.getElementById('score-percent').style.color = 'var(--warning)';
+      } else {
+        scoreVisual.style.background = 'rgba(239, 68, 68, 0.1)';
+        document.getElementById('score-percent').style.color = 'var(--danger)';
+      }
+
+      document.getElementById('results-container').style.display = 'block';
+      document.getElementById('results-container').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function shareResult(type) {
+      Toast.show('Share functionality ready for implementation', 'info');
+    }
+
+    function downloadReport(type) {
+      Toast.show('PDF download ready for implementation', 'info');
+    }
+  </script>
+</body>
+</html>

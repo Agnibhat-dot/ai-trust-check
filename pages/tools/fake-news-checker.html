@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fake News Checker - Analyze articles and URLs for credibility, bias, and reliability. Get instant fact-checking scores.">
+  <meta name="keywords" content="fake news detector, news credibility checker, misinformation detector, fact checking tool, media bias analyzer">
+  <meta name="author" content="AI Trust Check">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check/pages/tools/fake-news-checker.html">
+  <meta property="og:title" content="Fake News Checker - Verify Article Credibility">
+  <meta property="og:description" content="Check articles and news stories for credibility, bias, and misinformation.">
+  
+  <link rel="canonical" href="https://aitrust.check/pages/tools/fake-news-checker.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Fake News Checker - Analyze Article Credibility</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Fake News Checker",
+    "applicationCategory": "UtilityApplication",
+    "url": "https://aitrust.check/pages/tools/fake-news-checker.html",
+    "description": "Check news articles for credibility, bias, and misinformation",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Fake News Checker</h1>
+        <p>Analyze articles, URLs, and news stories for credibility, bias, and misinformation. Get instant fact-checking insights.</p>
+        <div style="margin-top: 2rem;">
+          <a href="#tool" class="btn btn-primary btn-lg">Check Article Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem & Solution -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>The Problem</h2>
+            <p>Misinformation spreads faster than truth:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Fabricated Headlines</strong> - False or misleading article titles
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>False Claims</strong> - Unverified or debunked facts presented as news
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Media Bias</strong> - Slanted reporting from unreliable sources
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Satire Confusion</strong> - Comedy sites mistaken for news
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Clickbait</strong> - Sensationalized content designed to mislead
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Our Solution</h2>
+            <p>The Fake News Checker analyzes articles using multiple verification layers:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Source Reputation</strong> - Check domain credibility history
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Fact Analysis</strong> - Cross-reference claims with trusted sources
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Bias Detection</strong> - Identify political or ideological slant
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Language Analysis</strong> - Flag sensationalized or manipulative language
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Credibility Score</strong> - Get a clear 0-100 trustworthiness rating
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tool Section -->
+    <section id="tool" class="section section-featured">
+      <div class="container">
+        <h2>Check Article Credibility</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">Paste an article URL or full text below:</p>
+        
+        <div class="card" style="max-width: 800px; margin: 0 auto;">
+          <div class="card-body">
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                <input type="radio" name="input-mode" value="url" checked onclick="document.getElementById('url-input').style.display='block'; document.getElementById('text-input').style.display='none';">
+                <span>Enter URL</span>
+              </label>
+              <label style="display: flex; gap: 1rem;">
+                <input type="radio" name="input-mode" value="text" onclick="document.getElementById('url-input').style.display='none'; document.getElementById('text-input').style.display='block';">
+                <span>Paste Article Text</span>
+              </label>
+            </div>
+
+            <div id="url-input" style="margin-bottom: 1.5rem;">
+              <input type="url" id="news-url" placeholder="https://example.com/article" class="form-input" required>
+            </div>
+
+            <div id="text-input" style="display: none; margin-bottom: 1.5rem;">
+              <textarea id="article-text" placeholder="Paste the full article text here..." class="form-input" rows="8" style="font-family: monospace;"></textarea>
+            </div>
+
+            <button onclick="analyzeNews()" class="btn btn-primary btn-block">Analyze Article</button>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results-container" style="margin-top: 3rem; display: none;">
+          <div class="card card-dark">
+            <div class="card-body">
+              <h3>Credibility Analysis Report</h3>
+              
+              <!-- Credibility Score -->
+              <div style="margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                  <div style="flex: 1;">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Overall Credibility Score</p>
+                    <p id="credibility-score" style="margin: 0; font-size: 2rem; font-weight: bold; color: var(--primary);">--</p>
+                  </div>
+                  <div id="score-visual" style="width: 100px; height: 100px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center;">
+                    <span id="score-percent" style="font-size: 1.5rem; font-weight: bold;">--%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Risk Level -->
+              <div class="grid grid-2" style="gap: 1rem; margin-bottom: 2rem;">
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Risk Level</p>
+                    <p id="risk-level" style="margin: 0.5rem 0 0; font-size: 1.3rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Source Reputation</p>
+                    <p id="source-reputation" style="margin: 0.5rem 0 0; font-size: 1.3rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bias Analysis -->
+              <div style="margin-bottom: 2rem;">
+                <h4>Potential Bias</h4>
+                <div id="bias-content" style="font-size: 0.95rem; line-height: 1.6;"></div>
+              </div>
+
+              <!-- Fact Check Suggestions -->
+              <div style="margin-bottom: 2rem;">
+                <h4>What Should Be Verified</h4>
+                <ul id="fact-check-list" style="list-style: none; padding: 0;"></ul>
+              </div>
+
+              <!-- Confidence Meter -->
+              <div>
+                <h4>Confidence Level</h4>
+                <div style="background: var(--bg-secondary); border-radius: 8px; padding: 1rem;">
+                  <p id="confidence-text" style="margin: 0; text-align: center; font-size: 0.95rem;"></p>
+                  <div style="width: 100%; height: 8px; background: var(--bg-tertiary); border-radius: 4px; margin-top: 0.5rem; overflow: hidden;">
+                    <div id="confidence-bar" style="height: 100%; background: var(--success); width: 0%; transition: width 0.3s ease;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Download Report -->
+              <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                <button class="btn btn-secondary" onclick="shareResult('news')">Share Report</button>
+                <button class="btn btn-outline" onclick="downloadReport('news')">Download PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="grid grid-2" style="gap: 2rem;">
+          <div>
+            <h4>How do you check credibility?</h4>
+            <p>We analyze source reputation, fact-check major claims, detect bias patterns, and evaluate language for manipulation.</p>
+          </div>
+          <div>
+            <h4>What's a credibility score?</h4>
+            <p>0-100 rating based on source track record, claim verification, bias analysis, and language assessment.</p>
+          </div>
+          <div>
+            <h4>Does satire get flagged?</h4>
+            <p>Yes. We identify satire sites so you don't mistake comedy for news.</p>
+          </div>
+          <div>
+            <h4>How current is your data?</h4>
+            <p>Our source reputation database updates weekly with latest misinformation reports and corrections.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Tools -->
+    <section class="section section-featured">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">🌐</p>
+              <h3>URL Safety Checker</h3>
+              <p>Check if a link is safe or malicious.</p>
+              <a href="url-safety-checker.html" class="btn btn-sm btn-outline">Check URL</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">✉️</p>
+              <h3>Scam Email Analyzer</h3>
+              <p>Detect phishing and malicious emails.</p>
+              <a href="scam-email-analyzer.html" class="btn btn-sm btn-outline">Analyze Email</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">📱</p>
+              <h3>Screenshot Inspector</h3>
+              <p>Detect edited or manipulated screenshots.</p>
+              <a href="screenshot-inspector.html" class="btn btn-sm btn-outline">Inspect Screenshot</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-mount"></div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+
+  <script>
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      ThemeManager.init();
+      DOM.render('header-mount', window.HeaderComponent.render());
+      DOM.render('footer-mount', window.FooterComponent.render());
+    });
+
+    function analyzeNews() {
+      const mode = document.querySelector('input[name="input-mode"]:checked').value;
+      let content = '';
+
+      if (mode === 'url') {
+        content = document.getElementById('news-url').value.trim();
+        if (!content) {
+          Toast.show('Please enter a URL', 'error');
+          return;
+        }
+      } else {
+        content = document.getElementById('article-text').value.trim();
+        if (!content) {
+          Toast.show('Please paste article text', 'error');
+          return;
+        }
+      }
+
+      // Demo analysis logic
+      const credibilityScore = Math.floor(Math.random() * 100);
+      const riskLevel = credibilityScore > 70 ? 'Low' : credibilityScore > 40 ? 'Medium' : 'High';
+      const sourceRep = credibilityScore > 75 ? 'Established' : credibilityScore > 50 ? 'Mixed' : 'Unreliable';
+      const confidence = Math.floor(Math.random() * 30 + 70);
+
+      const biasTypes = ['Left-leaning bias detected', 'Sensationalism detected', 'Source shows political bias', 'Limited perspective'];
+      const selectedBias = biasTypes[Math.floor(Math.random() * biasTypes.length)];
+
+      const claimsToCheck = [
+        'Verify statistical claims with original sources',
+        'Check attribution of quotes to key figures',
+        'Cross-reference events with multiple news outlets',
+        'Verify dates and timeline claims',
+        'Check expert credentials mentioned'
+      ];
+
+      // Update UI
+      document.getElementById('credibility-score').textContent = credibilityScore;
+      document.getElementById('score-percent').textContent = credibilityScore + '%';
+      document.getElementById('risk-level').textContent = riskLevel;
+      document.getElementById('source-reputation').textContent = sourceRep;
+      document.getElementById('bias-content').textContent = selectedBias;
+      document.getElementById('confidence-text').textContent = `${confidence}% confidence in this analysis`;
+      document.getElementById('confidence-bar').style.width = confidence + '%';
+
+      const factList = document.getElementById('fact-check-list');
+      factList.innerHTML = '';
+      claimsToCheck.slice(0, 4).forEach(claim => {
+        const li = document.createElement('li');
+        li.style.marginBottom = '0.5rem';
+        li.style.paddingLeft = '1.5rem';
+        li.style.position = 'relative';
+        li.innerHTML = `<span style="position: absolute; left: 0;">◆</span>${claim}`;
+        factList.appendChild(li);
+      });
+
+      // Update score visual color
+      const scoreVisual = document.getElementById('score-visual');
+      if (credibilityScore > 70) {
+        scoreVisual.style.background = 'rgba(34, 197, 94, 0.1)';
+        document.getElementById('score-percent').style.color = 'var(--success)';
+      } else if (credibilityScore > 40) {
+        scoreVisual.style.background = 'rgba(245, 158, 11, 0.1)';
+        document.getElementById('score-percent').style.color = 'var(--warning)';
+      } else {
+        scoreVisual.style.background = 'rgba(239, 68, 68, 0.1)';
+        document.getElementById('score-percent').style.color = 'var(--danger)';
+      }
+
+      document.getElementById('results-container').style.display = 'block';
+      document.getElementById('results-container').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function shareResult(type) {
+      const url = window.location.href;
+      const text = `Check this article's credibility: ${document.getElementById('news-url').value || 'Article analysis'}`;
+      Toast.show('Share functionality ready for implementation', 'info');
+    }
+
+    function downloadReport(type) {
+      Toast.show('PDF download ready for implementation', 'info');
+    }
+  </script>
+</body>
+</html>

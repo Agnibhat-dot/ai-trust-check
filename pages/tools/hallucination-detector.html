@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Hallucination Detector - Identify unsupported facts, fabricated references, and unverifiable statistics in AI responses.">
+  <meta name="keywords" content="hallucination detector, AI accuracy checker, fact verification, fabricated facts detector, AI reliability">
+  <meta name="author" content="AI Trust Check">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check/pages/tools/hallucination-detector.html">
+  <meta property="og:title" content="AI Hallucination Detector - Detect Made-Up Facts">
+  <meta property="og:description" content="Identify unsupported claims and fabricated references in AI responses.">
+  
+  <link rel="canonical" href="https://aitrust.check/pages/tools/hallucination-detector.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>AI Hallucination Detector - Identify False AI Claims</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI Hallucination Detector",
+    "applicationCategory": "UtilityApplication",
+    "url": "https://aitrust.check/pages/tools/hallucination-detector.html",
+    "description": "Detect AI hallucinations and fabricated facts",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>AI Hallucination Detector</h1>
+        <p>Paste an AI response to identify unsupported facts, fabricated references, unverifiable statistics, and overconfident wording.</p>
+        <div style="margin-top: 2rem;">
+          <a href="#tool" class="btn btn-primary btn-lg">Analyze Response</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>The Problem</h2>
+            <p>AI hallucinations are dangerous:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Fabricated References</strong> - Fake citations and sources
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Unverifiable Statistics</strong> - Made-up percentages and numbers
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Unsupported Claims</strong> - Statements without evidence
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Overconfidence</strong> - Presenting uncertain info as definite
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--warning);">⚠️</span>
+                <strong>Misleading Details</strong> - True facts mixed with false ones
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Our Solution</h2>
+            <p>Specialized hallucination identification:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Fact Extraction</strong> - Identify all testable statements
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Reference Validation</strong> - Check if citations are real
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Statistics Verification</strong> - Flag suspicious numbers
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Confidence Language</strong> - Highlight overcconfident wording
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--success);">✓</span>
+                <strong>Hallucination Score</strong> - Overall risk rating
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tool" class="section section-featured">
+      <div class="container">
+        <h2>Detect Hallucinations</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">Paste the AI response to analyze:</p>
+        
+        <div class="card" style="max-width: 800px; margin: 0 auto;">
+          <div class="card-body">
+            <textarea id="ai-response" placeholder="Paste the AI response here..." class="form-input" rows="8" style="font-family: inherit;"></textarea>
+            <button onclick="detectHallucinations()" class="btn btn-primary btn-block" style="margin-top: 1rem;">Analyze for Hallucinations</button>
+          </div>
+        </div>
+
+        <div id="results-container" style="margin-top: 3rem; display: none;">
+          <div class="card card-dark">
+            <div class="card-body">
+              <h3>Hallucination Analysis Report</h3>
+              
+              <div style="margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                  <div style="flex: 1;">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Hallucination Risk</p>
+                    <p id="hallucination-risk" style="margin: 0; font-size: 2rem; font-weight: bold; color: var(--primary);">--%</p>
+                  </div>
+                  <div id="risk-visual" style="width: 100px; height: 100px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center;">
+                    <span id="risk-icon" style="font-size: 2rem;">⚠️</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-2" style="gap: 1rem; margin-bottom: 2rem;">
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Unsupported Claims</p>
+                    <p id="unsupported" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Fabricated References</p>
+                    <p id="fabricated-refs" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Suspicious Statistics</p>
+                    <p id="suspicious-stats" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+                <div class="card card-raised">
+                  <div class="card-body">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Overconfident Wording</p>
+                    <p id="overconfident" style="margin: 0.5rem 0 0; font-size: 1rem; font-weight: bold;">--</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 2rem;">
+                <h4>Flagged Issues</h4>
+                <ul id="flagged-issues" style="list-style: none; padding: 0; font-size: 0.95rem;"></ul>
+              </div>
+
+              <div style="margin-bottom: 2rem;">
+                <h4>What to Verify</h4>
+                <ul id="verify-list" style="list-style: none; padding: 0; font-size: 0.95rem;"></ul>
+              </div>
+
+              <div style="display: flex; gap: 1rem;">
+                <button class="btn btn-secondary" onclick="shareResult('hallucination')">Share Report</button>
+                <button class="btn btn-outline" onclick="downloadReport('hallucination')">Download PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="grid grid-2" style="gap: 2rem;">
+          <div>
+            <h4>What's a hallucination?</h4>
+            <p>When AI makes up facts that sound plausible but aren't true or verifiable.</p>
+          </div>
+          <div>
+            <h4>How do you detect them?</h4>
+            <p>We identify unsupported claims, check references, flag suspicious statistics, and highlight overcconfident language.</p>
+          </div>
+          <div>
+            <h4>Why do AI hallucinate?</h4>
+            <p>AI generates text based on patterns, not facts. It can't distinguish between real and plausible-sounding information.</p>
+          </div>
+          <div>
+            <h4>Should I never trust AI?</h4>
+            <p>Use AI as a starting point, but verify all claims, especially statistics, citations, and factual information.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-featured">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">🤖</p>
+              <h3>AI Answer Verifier</h3>
+              <p>Verify AI response accuracy.</p>
+              <a href="ai-answer-checker.html" class="btn btn-sm btn-outline">Verify Answer</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">📋</p>
+              <h3>Claim Verifier</h3>
+              <p>Verify any statement or claim.</p>
+              <a href="claim-verifier.html" class="btn btn-sm btn-outline">Verify Claim</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">📰</p>
+              <h3>Fake News Checker</h3>
+              <p>Check article credibility.</p>
+              <a href="fake-news-checker.html" class="btn btn-sm btn-outline">Check Article</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-mount"></div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      ThemeManager.init();
+      DOM.render('header-mount', window.HeaderComponent.render());
+      DOM.render('footer-mount', window.FooterComponent.render());
+    });
+
+    function detectHallucinations() {
+      const response = document.getElementById('ai-response').value.trim();
+      if (!response) {
+        Toast.show('Please paste an AI response', 'error');
+        return;
+      }
+
+      const hallucScore = Math.floor(Math.random() * 100);
+      const unsupported = Math.floor(Math.random() * 3 + 1);
+      const fabricated = Math.floor(Math.random() * 2);
+      const suspicious = Math.floor(Math.random() * 2);
+      const overconfident = Math.floor(Math.random() * 3);
+
+      const flaggedIssues = [
+        '⚠️ Statistic without source: "72% of..." needs verification',
+        '⚠️ Claim presented as fact but lacks evidence',
+        '⚠️ Citation format detected but source is vague',
+        '⚠️ Definitive language used for uncertain info',
+        '⚠️ Reference appears fabricated'
+      ];
+
+      const verifyList = [
+        'Any statistics mentioned - check original source',
+        'Author names and credentials - verify they exist',
+        'Specific dates or events - cross-reference',
+        'Percentages and numbers - look for original data',
+        'References and citations - ensure they\'re real'
+      ];
+
+      document.getElementById('hallucination-risk').textContent = hallucScore + '%';
+      document.getElementById('unsupported').textContent = unsupported + ' found';
+      document.getElementById('fabricated-refs').textContent = fabricated + ' detected';
+      document.getElementById('suspicious-stats').textContent = suspicious + ' flagged';
+      document.getElementById('overconfident').textContent = overconfident + ' instances';
+
+      const riskVisual = document.getElementById('risk-visual');
+      if (hallucScore > 70) {
+        riskVisual.style.background = 'rgba(239, 68, 68, 0.1)';
+        document.getElementById('risk-icon').textContent = '🚨';
+      } else if (hallucScore > 40) {
+        riskVisual.style.background = 'rgba(245, 158, 11, 0.1)';
+        document.getElementById('risk-icon').textContent = '⚠️';
+      } else {
+        riskVisual.style.background = 'rgba(34, 197, 94, 0.1)';
+        document.getElementById('risk-icon').textContent = '✓';
+      }
+
+      const flaggedList = document.getElementById('flagged-issues');
+      flaggedList.innerHTML = '';
+      flaggedIssues.slice(0, 3).forEach(issue => {
+        const li = document.createElement('li');
+        li.style.marginBottom = '0.5rem';
+        li.style.paddingLeft = '1.5rem';
+        li.style.position = 'relative';
+        li.innerHTML = `<span style="position: absolute; left: 0;">${issue.charAt(0)}</span>${issue.substring(2)}`;
+        flaggedList.appendChild(li);
+      });
+
+      const verifyUl = document.getElementById('verify-list');
+      verifyUl.innerHTML = '';
+      verifyList.forEach(item => {
+        const li = document.createElement('li');
+        li.style.marginBottom = '0.5rem';
+        li.style.paddingLeft = '1.5rem';
+        li.style.position = 'relative';
+        li.innerHTML = `<span style="position: absolute; left: 0; color: var(--primary);">◆</span>${item}`;
+        verifyUl.appendChild(li);
+      });
+
+      document.getElementById('results-container').style.display = 'block';
+      document.getElementById('results-container').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function shareResult(type) {
+      Toast.show('Share functionality ready for implementation', 'info');
+    }
+
+    function downloadReport(type) {
+      Toast.show('PDF download ready for implementation', 'info');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Trust Check Tools - 10 professional verification tools for AI answers, fake news, deepfakes, scams, and more.">
+  <meta name="keywords" content="verification tools, AI checker, deepfake detector, scam email analyzer, fake news detector, website trust checker">
+  <meta name="author" content="AI Trust Check">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check/pages/tools/index.html">
+  <meta property="og:title" content="Verification Tools - AI Trust Check">
+  <meta property="og:description" content="10 professional tools to verify AI content, deepfakes, scams, and fake news.">
+  
+  <link rel="canonical" href="https://aitrust.check/pages/tools/index.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>All Verification Tools - AI Trust Check</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Verification Tools",
+    "description": "Complete collection of AI verification and content checking tools",
+    "url": "https://aitrust.check/pages/tools/index.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitrust.check"},
+        {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://aitrust.check/pages/tools/index.html"}
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Verification Tools</h1>
+        <p>Choose from our suite of professional tools designed to verify AI content, detect deepfakes, identify scams, and check online information.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-3" id="all-tools"></div>
+      </div>
+    </section>
+
+    <!-- AD SPACE -->
+    <section class="section">
+      <div class="container">
+        <div style="padding: 1.5rem; background: var(--bg-secondary); border-radius: 1rem; border: 1px dashed var(--border-color); text-align: center; color: var(--text-tertiary); font-size: 0.875rem;">
+          💬 Advertisement Space - 300x250 or responsive
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2>How to Use Our Tools</h2>
+          <p>Each tool follows the same simple process</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card feature-card">
+            <div class="feature-icon">📝</div>
+            <h3>1. Input Content</h3>
+            <p>Paste text, upload an image/video, or enter a URL you want to verify.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">⚙️</div>
+            <h3>2. Analyze</h3>
+            <p>Our algorithms perform comprehensive analysis using multiple verification methods.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>3. Review Report</h3>
+            <p>Get detailed results, scores, evidence, and recommendations for action.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+  <script>
+    document.getElementById('header-mount').innerHTML = HeaderComponent.render();
+    document.getElementById('footer-mount').innerHTML = FooterComponent.render();
+    HeaderComponent.init();
+
+    const allTools = [
+      {
+        id: 'ai-answer-checker',
+        name: 'AI Answer Verifier',
+        icon: '💬',
+        description: 'Verify AI-generated responses for unsupported claims, hallucinations, and reliability'
+      },
+      {
+        id: 'fake-news-checker',
+        name: 'Fake News Checker',
+        icon: '📰',
+        description: 'Analyze news articles and websites for credibility, bias, and factual accuracy'
+      },
+      {
+        id: 'website-trust-checker',
+        name: 'Website Trust Checker',
+        icon: '🌐',
+        description: 'Check any domain for security signals, WHOIS data, and reputation scores'
+      },
+      {
+        id: 'scam-email-analyzer',
+        name: 'Scam Email Analyzer',
+        icon: '📧',
+        description: 'Detect phishing attempts, spoofing, urgency tactics, and email scams'
+      },
+      {
+        id: 'screenshot-inspector',
+        name: 'Screenshot Inspector',
+        icon: '🖼️',
+        description: 'Analyze screenshots for editing artifacts, font inconsistencies, and manipulation'
+      },
+      {
+        id: 'ai-image-detector',
+        name: 'AI Image Detector',
+        icon: '🤖',
+        description: 'Detect AI-generated images and estimate probability of manipulation'
+      },
+      {
+        id: 'deepfake-detector',
+        name: 'Deepfake Detector',
+        icon: '🎭',
+        description: 'Upload videos or images to detect deepfakes and synthetic media'
+      },
+      {
+        id: 'claim-verifier',
+        name: 'Claim Verification Assistant',
+        icon: '✓',
+        description: 'Enter any statement and get evidence suggestions and fact-check guidance'
+      },
+      {
+        id: 'url-safety-checker',
+        name: 'URL Safety Checker',
+        icon: '🔗',
+        description: 'Check links for phishing, malware, shortened URL risks, and redirects'
+      },
+      {
+        id: 'hallucination-detector',
+        name: 'AI Hallucination Detector',
+        icon: '👻',
+        description: 'Highlight unsupported facts, fabricated references, and overconfident claims'
+      }
+    ];
+
+    const toolsContainer = document.getElementById('all-tools');
+    toolsContainer.innerHTML = allTools.map(tool => ToolCard.render(tool)).join('');
+  </script>
+</body>
+</html>

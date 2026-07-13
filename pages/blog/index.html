@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Trust Check Blog - Latest news on AI safety, deepfakes, cybersecurity, and online verification. Research, insights, and security alerts.">
+  <meta name="keywords" content="AI safety blog, deepfake news, cybersecurity, online scams, AI verification, security research">
+  <meta name="author" content="AI Trust Check">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check/pages/blog/index.html">
+  <meta property="og:title" content="AI Trust Check Blog">
+  <meta property="og:description" content="Latest articles on AI safety, deepfakes, cybersecurity, and content verification.">
+  
+  <link rel="canonical" href="https://aitrust.check/pages/blog/index.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Blog - AI Safety & Security News</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "AI Trust Check Blog",
+    "description": "Blog covering AI safety, deepfakes, cybersecurity, and online verification",
+    "url": "https://aitrust.check/pages/blog/index.html"
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Blog</h1>
+        <p>Latest articles on AI safety, security research, deepfakes, scams, and online verification.</p>
+      </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <a href="#article-featured" class="card" style="text-decoration: none;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+            <div>
+              <div class="badge badge-primary" style="margin-bottom: 1rem;">Featured</div>
+              <h2 style="margin: 0 0 1rem;">The Rise of AI-Generated Scams: What You Need to Know</h2>
+              <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                Scammers are using generative AI to create convincing phishing emails, deepfake videos, and synthetic voices. Learn how to protect yourself.
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; color: var(--text-tertiary); font-size: 0.875rem;">
+                <span>By Sarah Chen • January 15, 2024</span>
+                <span>12 min read</span>
+              </div>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(16, 185, 129, 0.2)); border-radius: 1rem; height: 300px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+              🤖
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Search & Filter -->
+    <section class="section">
+      <div class="container">
+        <div style="margin-bottom: 2rem;">
+          <div class="grid grid-3" style="gap: 1rem; margin-bottom: 1rem;">
+            <input type="text" id="blog-search" placeholder="Search articles..." style="grid-column: 1 / -1;">
+            
+            <select id="blog-category">
+              <option value="">All Categories</option>
+              <option value="ai-safety">AI Safety</option>
+              <option value="deepfakes">Deepfakes</option>
+              <option value="security">Security</option>
+              <option value="scams">Scams</option>
+              <option value="research">Research</option>
+            </select>
+
+            <select id="blog-sort">
+              <option value="recent">Most Recent</option>
+              <option value="popular">Most Popular</option>
+              <option value="trending">Trending</option>
+            </select>
+
+            <button class="btn btn-ghost" onclick="resetBlogFilters()" style="grid-column: 3;">Reset</button>
+          </div>
+        </div>
+
+        <!-- Article Grid -->
+        <div class="grid grid-2" id="blog-grid">
+          <!-- Articles will load here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="section">
+      <div class="container">
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-outline btn-sm">← Previous</button>
+          <button class="btn btn-primary btn-sm">1</button>
+          <button class="btn btn-outline btn-sm">2</button>
+          <button class="btn btn-outline btn-sm">3</button>
+          <button class="btn btn-outline btn-sm">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- AD SPACE -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div style="padding: 1.5rem; background: var(--bg-primary); border-radius: 1rem; border: 1px dashed var(--border-color); text-align: center; color: var(--text-tertiary); font-size: 0.875rem;">
+          💬 Advertisement Space - 728x90 or responsive
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="section">
+      <div class="container" style="max-width: 600px; margin: 0 auto;">
+        <div class="card" style="text-align: center;">
+          <h2 style="margin-top: 0;">Subscribe to Our Newsletter</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Get weekly updates on AI safety, security alerts, and the latest verification tools.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr auto; gap: 0.5rem; margin-bottom: 1rem;">
+            <input type="email" id="newsletter-email" placeholder="your@email.com">
+            <button class="btn btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+          </div>
+
+          <p style="font-size: 0.875rem; color: var(--text-tertiary);">
+            We respect your privacy. Unsubscribe anytime.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2>Browse by Category</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <a href="#category-ai" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">🧠</div>
+            <h3 style="margin: 0;">AI Safety</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Articles on AI limitations, alignment, and safety</p>
+            <div style="margin-top: auto; color: var(--primary-blue); font-size: 0.9rem;">24 articles</div>
+          </a>
+
+          <a href="#category-deepfake" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">🎭</div>
+            <h3 style="margin: 0;">Deepfakes</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Detection techniques and synthetic media analysis</p>
+            <div style="margin-top: auto; color: var(--primary-blue); font-size: 0.9rem;">16 articles</div>
+          </a>
+
+          <a href="#category-security" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">🛡️</div>
+            <h3 style="margin: 0;">Security</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Cybersecurity tips and threat analysis</p>
+            <div style="margin-top: auto; color: var(--primary-blue); font-size: 0.9rem;">32 articles</div>
+          </a>
+
+          <a href="#category-scams" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">🚨</div>
+            <h3 style="margin: 0;">Scams</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Latest scam alerts and fraud prevention</p>
+            <div style="margin-top: auto; color: var(--primary-blue); font-size: 0.9rem;">28 articles</div>
+          </a>
+
+          <a href="#category-research" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">📊</div>
+            <h3 style="margin: 0;">Research</h3>
+            <p style="margin: 0; font-size: 0.95rem;">In-depth research and studies</p>
+            <div style="margin-top: auto; color: var(--primary-blue); font-size: 0.9rem;">12 articles</div>
+          </a>
+
+          <a href="#category-tools" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">🔧</div>
+            <h3 style="margin: 0;">Tool Guides</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Guides for using verification tools</p>
+            <div style="margin-top: auto; color: var(--primary-blue); font-size: 0.9rem;">18 articles</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Articles -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Most Popular</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Popular articles will render here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+  <script>
+    document.getElementById('header-mount').innerHTML = HeaderComponent.render();
+    document.getElementById('footer-mount').innerHTML = FooterComponent.render();
+    HeaderComponent.init();
+
+    // Sample blog articles
+    const blogArticles = [
+      {
+        id: 1,
+        title: 'How ChatGPT Can Hallucinate and Why It Matters',
+        category: 'AI Safety',
+        excerpt: 'Understanding AI hallucinations and their implications for users.',
+        author: 'Dr. Alex Smith',
+        date: '2024-01-14',
+        readTime: 8,
+        views: 2341
+      },
+      {
+        id: 2,
+        title: 'Deepfake Detection: Current Techniques and Limitations',
+        category: 'Deepfakes',
+        excerpt: 'A comprehensive review of deepfake detection methods and their accuracy rates.',
+        author: 'Prof. Maria Garcia',
+        date: '2024-01-13',
+        readTime: 12,
+        views: 1876
+      },
+      {
+        id: 3,
+        title: 'Phishing Email Campaign Targeting Financial Institutions',
+        category: 'Scams',
+        excerpt: 'New phishing campaign identified and analysis of evasion techniques.',
+        author: 'Security Team',
+        date: '2024-01-12',
+        readTime: 6,
+        views: 1654
+      },
+      {
+        id: 4,
+        title: 'AI-Generated Misinformation: The New Frontier',
+        category: 'Security',
+        excerpt: 'How generative AI is being used to create convincing false information at scale.',
+        author: 'Dr. James Chen',
+        date: '2024-01-11',
+        readTime: 10,
+        views: 3421
+      },
+      {
+        id: 5,
+        title: 'Research: How Humans Detect Fake Images',
+        category: 'Research',
+        excerpt: 'New study on human perception of manipulated images and detection capabilities.',
+        author: 'Research Lab',
+        date: '2024-01-10',
+        readTime: 15,
+        views: 987
+      },
+      {
+        id: 6,
+        title: 'Getting Started with URL Safety Checker',
+        category: 'Tools',
+        excerpt: 'Complete guide to using our URL Safety Checker tool effectively.',
+        author: 'Support Team',
+        date: '2024-01-09',
+        readTime: 5,
+        views: 1342
+      }
+    ];
+
+    function renderBlogArticles(articles) {
+      const grid = document.getElementById('blog-grid');
+      grid.innerHTML = articles
+        .map(article => `
+          <a href="#article-${article.id}" class="card" style="text-decoration: none;">
+            <div class="badge" style="margin-bottom: 1rem; background: var(--primary-blue);">${article.category}</div>
+            <h3 style="margin: 0 0 0.75rem;">${article.title}</h3>
+            <p style="margin: 0 0 1rem; color: var(--text-secondary); font-size: 0.95rem;">
+              ${article.excerpt}
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.875rem; color: var(--text-tertiary); padding-top: 1rem; border-top: 1px solid var(--border-color);">
+              <div>
+                <strong>${article.author}</strong> • ${article.date}
+              </div>
+              <div>${article.readTime} min read</div>
+            </div>
+          </a>
+        `)
+        .join('');
+    }
+
+    renderBlogArticles(blogArticles);
+
+    function subscribeNewsletter() {
+      const email = document.getElementById('newsletter-email').value;
+      if (!Validation.email(email)) {
+        Toast.warning('Please enter a valid email address');
+        return;
+      }
+      Toast.success('Thank you for subscribing!');
+      document.getElementById('newsletter-email').value = '';
+    }
+
+    function resetBlogFilters() {
+      document.getElementById('blog-search').value = '';
+      document.getElementById('blog-category').value = '';
+      document.getElementById('blog-sort').value = 'recent';
+      renderBlogArticles(blogArticles);
+    }
+
+    Analytics.pageView('/pages/blog/index.html');
+  </script>
+</body>
+</html>

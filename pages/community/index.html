@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Trust Check Community Database - User-submitted database of verified scams, fake websites, deepfakes, and misinformation with community voting.">
+  <meta name="keywords" content="scam database, fake website list, deepfake database, community submissions, verified threats">
+  <meta name="author" content="AI Trust Check">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check/pages/community/index.html">
+  <meta property="og:title" content="Community Database - Verify Scams & Threats">
+  <meta property="og:description" content="Crowdsourced database of verified scams, fake websites, deepfakes, and misinformation.">
+  
+  <link rel="canonical" href="https://aitrust.check/pages/community/index.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Community Database - Shared Scam & Threat Database</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Community Database",
+    "description": "Crowdsourced database for reporting and tracking scams, fake websites, and threats",
+    "url": "https://aitrust.check/pages/community/index.html"
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Community Database</h1>
+        <p>Help others by sharing verified scams, fake websites, deepfakes, and misinformation. A growing database built by the community.</p>
+        <div style="margin-top: 2rem;">
+          <button class="btn btn-primary btn-lg" onclick="showSubmissionForm()">Submit Report</button>
+          <button class="btn btn-outline btn-lg" onclick="document.getElementById('database').scrollIntoView({behavior: 'smooth'})">Browse Database</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="grid grid-4" style="text-align: center;">
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 0.5rem;">1,247</div>
+            <div style="color: var(--text-secondary);">Scams Reported</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 700; color: var(--warning); margin-bottom: 0.5rem;">342</div>
+            <div style="color: var(--text-secondary);">Fake Websites</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 700; color: var(--error); margin-bottom: 0.5rem;">89</div>
+            <div style="color: var(--text-secondary);">Deepfakes</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 700; color: var(--success); margin-bottom: 0.5rem;">2,847</div>
+            <div style="color: var(--text-secondary);">Community Members</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Submission Form Modal -->
+    <div id="submission-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1200; overflow-y: auto;">
+      <div class="container" style="max-width: 600px; padding: 2rem 0;">
+        <div class="card" style="margin: 2rem auto;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <h2 style="margin: 0;">Submit Report</h2>
+            <button class="btn btn-ghost btn-sm" onclick="hideSubmissionForm()">✕</button>
+          </div>
+
+          <div class="form-group">
+            <label for="report-type">Type of Report *</label>
+            <select id="report-type" required>
+              <option value="">Select type...</option>
+              <option value="phishing-email">Phishing Email</option>
+              <option value="scam-website">Scam Website</option>
+              <option value="fake-seller">Fake Seller/Account</option>
+              <option value="deepfake">Deepfake Video/Image</option>
+              <option value="misinformation">Misinformation/False News</option>
+              <option value="ai-generated">AI-Generated Scam Content</option>
+              <option value="investment-scam">Investment Scam</option>
+              <option value="romance-scam">Romance Scam</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="report-title">Title *</label>
+            <input type="text" id="report-title" placeholder="e.g., PayPal Phishing Email Campaign" required>
+          </div>
+
+          <div class="form-group">
+            <label for="report-description">Description *</label>
+            <textarea id="report-description" placeholder="Describe what you found and why you believe it's a scam/threat..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="report-evidence">Evidence or Details</label>
+            <textarea id="report-evidence" placeholder="Email content, website URL, screenshots, etc. (no personal data)"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="report-date">When Did You Encounter This? *</label>
+            <input type="date" id="report-date" required>
+          </div>
+
+          <div class="form-group">
+            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 400;">
+              <input type="checkbox" id="report-verify" required>
+              <span>I verify this information is accurate and I won't include personal data</span>
+            </label>
+          </div>
+
+          <button class="btn btn-primary" style="width: 100%;" onclick="submitReport()">
+            Submit Report
+          </button>
+
+          <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-tertiary); text-align: center;">
+            Reports are reviewed by moderators before publishing
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters & Search -->
+    <section class="section">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 1.5rem;">Database</h2>
+
+        <div style="margin-bottom: 2rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: 1rem;">
+          <div class="grid grid-3" style="gap: 1rem; margin-bottom: 1rem;">
+            <input type="text" id="search-query" placeholder="Search database..." style="grid-column: 1 / -1;">
+            
+            <select id="filter-type">
+              <option value="">All Types</option>
+              <option value="phishing">Phishing</option>
+              <option value="scam">Scams</option>
+              <option value="deepfake">Deepfakes</option>
+              <option value="misinformation">Misinformation</option>
+            </select>
+
+            <select id="filter-risk">
+              <option value="">All Risk Levels</option>
+              <option value="critical">Critical</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+
+            <select id="filter-sort">
+              <option value="recent">Most Recent</option>
+              <option value="popular">Most Helpful</option>
+              <option value="trending">Trending</option>
+            </select>
+          </div>
+
+          <button class="btn btn-ghost" style="width: 100%;" onclick="resetFilters()">Reset Filters</button>
+        </div>
+
+        <!-- Database Items -->
+        <div id="database" class="grid grid-2" style="gap: 1.5rem;">
+          <!-- Items will load here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="section">
+      <div class="container">
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-outline btn-sm">← Previous</button>
+          <button class="btn btn-primary btn-sm">1</button>
+          <button class="btn btn-outline btn-sm">2</button>
+          <button class="btn btn-outline btn-sm">3</button>
+          <button class="btn btn-outline btn-sm">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- AD SPACE -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div style="padding: 1.5rem; background: var(--bg-primary); border-radius: 1rem; border: 1px dashed var(--border-color); text-align: center; color: var(--text-tertiary); font-size: 0.875rem;">
+          💬 Advertisement Space - 728x90 or responsive
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Guidelines -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Community Guidelines</h2>
+          <p>Please follow these guidelines when submitting reports</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card feature-card">
+            <div class="feature-icon">✓</div>
+            <h3>Do Report</h3>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 0.5rem;">Real scams you've encountered</li>
+              <li style="margin-bottom: 0.5rem;">Verified deepfakes</li>
+              <li style="margin-bottom: 0.5rem;">Suspicious websites</li>
+              <li>Misinformation campaigns</li>
+            </ul>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">✕</div>
+            <h3>Don't Report</h3>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 0.5rem;">Personal data or PII</li>
+              <li style="margin-bottom: 0.5rem;">Unverified rumors</li>
+              <li style="margin-bottom: 0.5rem;">Copyright violations</li>
+              <li>Spam or off-topic content</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+            Reports are moderated by our team. False reports may result in account restrictions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2>FAQ</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card" style="cursor: pointer;" onclick="toggleAnswer(this)">
+            <h4 style="margin-top: 0; margin-bottom: 0;">How does moderation work?</h4>
+            <p style="display: none; margin-bottom: 0; margin-top: 1rem; color: var(--text-secondary);">Our team reviews all submissions within 24 hours. Reports are checked for accuracy and compliance with guidelines before publishing.</p>
+          </div>
+
+          <div class="card" style="cursor: pointer;" onclick="toggleAnswer(this)">
+            <h4 style="margin-top: 0; margin-bottom: 0;">Can I edit my report?</h4>
+            <p style="display: none; margin-bottom: 0; margin-top: 1rem; color: var(--text-secondary);">Yes, you can edit your report for up to 7 days after submission. After that, contact support.</p>
+          </div>
+
+          <div class="card" style="cursor: pointer;" onclick="toggleAnswer(this)">
+            <h4 style="margin-top: 0; margin-bottom: 0;">Will my information be private?</h4>
+            <p style="display: none; margin-bottom: 0; margin-top: 1rem; color: var(--text-secondary);">Yes. We don't share your email or personal information. Only approved reports are published.</p>
+          </div>
+
+          <div class="card" style="cursor: pointer;" onclick="toggleAnswer(this)">
+            <h4 style="margin-top: 0; margin-bottom: 0;">How is "helpful" determined?</h4>
+            <p style="display: none; margin-bottom: 0; margin-top: 1rem; color: var(--text-secondary);">Users can vote on whether reports are helpful. Most helpful reports get featured and ranked higher.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+  <script>
+    document.getElementById('header-mount').innerHTML = HeaderComponent.render();
+    document.getElementById('footer-mount').innerHTML = FooterComponent.render();
+    HeaderComponent.init();
+
+    // Sample database items
+    const databaseItems = [
+      {
+        id: 1,
+        type: '📧 Phishing',
+        title: 'PayPal Account Verification Scam',
+        risk: 'Critical',
+        date: '2024-01-12',
+        description: 'Mass phishing campaign impersonating PayPal asking to verify account details.',
+        helpful: 342,
+        verified: true
+      },
+      {
+        id: 2,
+        type: '🌐 Fake Website',
+        title: 'Amazon Delivery Scam Clone',
+        risk: 'High',
+        date: '2024-01-10',
+        description: 'Website mimics Amazon delivery notification to steal login credentials.',
+        helpful: 218,
+        verified: true
+      },
+      {
+        id: 3,
+        type: '🎭 Deepfake',
+        title: 'Celebrity Voice Deepfake',
+        risk: 'High',
+        date: '2024-01-08',
+        description: 'AI-generated video using celebrity voice to promote crypto scam.',
+        helpful: 156,
+        verified: true
+      },
+      {
+        id: 4,
+        type: '📰 Misinformation',
+        title: 'False Stock Market Prediction',
+        risk: 'Medium',
+        date: '2024-01-06',
+        description: 'AI-generated article spreading false information about tech stocks.',
+        helpful: 94,
+        verified: true
+      },
+      {
+        id: 5,
+        type: '💰 Investment Scam',
+        title: 'Crypto Pump & Dump Scheme',
+        risk: 'Critical',
+        date: '2024-01-05',
+        description: 'Coordinated campaign to pump penny cryptocurrency before dumping.',
+        helpful: 287,
+        verified: true
+      },
+      {
+        id: 6,
+        type: '❤️ Romance Scam',
+        title: 'Fake Profile Army',
+        risk: 'Medium',
+        date: '2024-01-03',
+        description: 'Network of fake dating profiles used to extract money from lonely people.',
+        helpful: 165,
+        verified: true
+      }
+    ];
+
+    function renderDatabase(items) {
+      const dbContainer = document.getElementById('database');
+      dbContainer.innerHTML = items.map(item => `
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <div>
+              <div class="badge" style="margin-bottom: 0.5rem;">${item.type}</div>
+              <h3 style="margin: 0.5rem 0 0;">${item.title}</h3>
+            </div>
+            <div class="badge" style="background-color: ${item.risk === 'Critical' ? '#ef4444' : item.risk === 'High' ? '#f59e0b' : '#3b82f6'}; color: white;">
+              ${item.risk}
+            </div>
+          </div>
+
+          <p style="margin: 0 0 1rem; color: var(--text-secondary); font-size: 0.95rem;">
+            ${item.description}
+          </p>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.875rem; color: var(--text-tertiary); padding: 1rem 0; border-top: 1px solid var(--border-color);">
+            <div>
+              <span style="color: var(--success);">✓</span> Verified • ${item.date}
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <button class="btn btn-ghost btn-sm" onclick="markHelpful(${item.id})">
+                👍 ${item.helpful}
+              </button>
+              <button class="btn btn-ghost btn-sm">💬 View</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    renderDatabase(databaseItems);
+
+    function showSubmissionForm() {
+      document.getElementById('submission-modal').style.display = 'flex';
+    }
+
+    function hideSubmissionForm() {
+      document.getElementById('submission-modal').style.display = 'none';
+    }
+
+    function submitReport() {
+      const title = document.getElementById('report-title').value;
+      if (!title) {
+        Toast.warning('Please fill in all required fields');
+        return;
+      }
+      Toast.success('Thank you! Your report has been submitted for review.');
+      hideSubmissionForm();
+    }
+
+    function markHelpful(id) {
+      Toast.success('Thank you for finding this helpful!');
+    }
+
+    function resetFilters() {
+      document.getElementById('search-query').value = '';
+      document.getElementById('filter-type').value = '';
+      document.getElementById('filter-risk').value = '';
+      document.getElementById('filter-sort').value = 'recent';
+      renderDatabase(databaseItems);
+    }
+
+    function toggleAnswer(el) {
+      const p = el.querySelector('p');
+      if (p) {
+        p.style.display = p.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+
+    Analytics.pageView('/pages/community/index.html');
+  </script>
+</body>
+</html>
