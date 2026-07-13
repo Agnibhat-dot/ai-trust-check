@@ -1,0 +1,22 @@
+{
+  "runners": [
+    "axe",
+    "htmlcs"
+  ],
+  "standard": "WCAG2AA",
+  "timeout": 10000,
+  "wait": 1000,
+  "chromeLaunchConfig": {
+    "args": [
+      "--no-sandbox"
+    ]
+  },
+  "urls": [
+    "http://localhost:8000/index.html",
+    "http://localhost:8000/pages/tools/ai-answer-checker.html",
+    "http://localhost:8000/pages/knowledge-center/index.html",
+    "http://localhost:8000/about.html",
+    "http://localhost:8000/contact.html",
+    "http://localhost:8000/terms.html"
+  ]
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About AI Trust Check - Learn about our mission to become the world's most trusted AI verification platform.">
+  <meta name="keywords" content="about AI Trust Check, company mission, team">
+  <meta name="author" content="AI Trust Check">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check/about.html">
+  <meta property="og:title" content="About AI Trust Check">
+  <meta property="og:description" content="Our mission to make AI verification accessible to everyone.">
+  
+  <link rel="canonical" href="https://aitrust.check/about.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>About AI Trust Check - Our Mission</title>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>About AI Trust Check</h1>
+        <p>Our mission: To become the world's most trusted AI verification platform, empowering millions to verify information with confidence.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>Our Mission</h2>
+            <p>Millions now use AI every day, but they often don't know whether to trust an answer, image, website, email, or screenshot.</p>
+            <p>AI Trust Check exists to solve this problem. We believe everyone deserves access to tools that help them verify information and evaluate the trustworthiness of AI-generated and online content.</p>
+            <p>We're building the most comprehensive, accessible, and reliable AI verification platform on the internet.</p>
+          </div>
+
+          <div>
+            <h2>Our Values</h2>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                <strong>Accessibility</strong> - Free tools for everyone
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                <strong>Transparency</strong> - Clear methodology and limitations
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                <strong>Accuracy</strong> - Rigorous analysis and testing
+              </li>
+              <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                <strong>Privacy</strong> - Your data is never sold or misused
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                <strong>Trust</strong> - We're accountable to our users
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-featured">
+      <div class="container">
+        <h2>What We Do</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">🔍</p>
+              <h3>Verify AI Responses</h3>
+              <p>Check ChatGPT, Claude, Gemini, and other AI responses for accuracy, hallucinations, and unsupported claims.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">📰</p>
+              <h3>Check News & Articles</h3>
+              <p>Analyze articles for credibility, bias, misinformation, and source reputation.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">🎬</p>
+              <h3>Detect Deepfakes</h3>
+              <p>Identify synthetic media, face swaps, and manipulated videos before they spread.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p style="font-size: 2rem; margin: 0 0 1rem;">✉️</p>
+              <h3>Analyze Emails</h3>
+              <p>Detect phishing, spoofing, and scam indicators in emails.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Get Started</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">Choose a tool and start verifying:</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="/pages/tools/index.html" class="btn btn-primary">Browse All Tools</a>
+          <a href="/pages/knowledge/index.html" class="btn btn-outline">Learn More</a>
+          <a href="contact.html" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-mount"></div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      ThemeManager.init();
+      DOM.render('header-mount', window.HeaderComponent.render());
+      DOM.render('footer-mount', window.FooterComponent.render());
+    });
+  </script>
+</body>
+</html>

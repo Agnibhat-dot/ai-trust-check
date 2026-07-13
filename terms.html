@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms of Service - AI Trust Check legal terms and conditions.">
+  <meta name="keywords" content="terms of service, legal, conditions">
+  <meta name="author" content="AI Trust Check">
+  
+  <link rel="canonical" href="https://aitrust.check/terms.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Terms of Service - AI Trust Check</title>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Terms of Service</h1>
+        <p>Please read these terms carefully before using AI Trust Check.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 900px;">
+        <div style="font-size: 0.95rem; line-height: 1.8;">
+          
+          <h2>1. Acceptance of Terms</h2>
+          <p>By accessing and using AI Trust Check ("Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+
+          <h2>2. Service Description</h2>
+          <p>AI Trust Check provides tools to analyze and verify AI-generated content, news articles, images, videos, emails, and websites. Our tools are provided on an "as-is" basis for informational purposes only.</p>
+
+          <h2>3. Disclaimer of Accuracy</h2>
+          <p>While we strive for accuracy, AI Trust Check does not guarantee that:</p>
+          <ul style="list-style-position: inside;">
+            <li>Analysis results are 100% accurate</li>
+            <li>Tools will catch all instances of misinformation, deepfakes, or manipulation</li>
+            <li>Results are appropriate for all use cases</li>
+            <li>Service will be uninterrupted or error-free</li>
+          </ul>
+
+          <h2>4. User Responsibilities</h2>
+          <p>Users are responsible for:</p>
+          <ul style="list-style-position: inside;">
+            <li>Verifying results independently</li>
+            <li>Not relying solely on our tools for important decisions</li>
+            <li>Complying with all applicable laws</li>
+            <li>Respecting intellectual property rights</li>
+          </ul>
+
+          <h2>5. Limitations of Liability</h2>
+          <p>To the fullest extent permitted by law, AI Trust Check shall not be liable for any indirect, incidental, special, consequential or punitive damages resulting from your use of or inability to use the service, even if we have been advised of the possibility of such damages.</p>
+
+          <h2>6. User Content</h2>
+          <p>Any content you upload or input into our tools is processed temporarily for analysis. We do not retain, store, or use your content for any other purpose without explicit permission. Your data is not sold to third parties.</p>
+
+          <h2>7. Prohibited Uses</h2>
+          <p>You agree not to:</p>
+          <ul style="list-style-position: inside;">
+            <li>Use our service to harass, threaten, or harm others</li>
+            <li>Create deepfakes or synthetic media for deception</li>
+            <li>Violate anyone's intellectual property or privacy rights</li>
+            <li>Attempt to circumvent security measures</li>
+            <li>Use automated tools to scrape or extract data</li>
+          </ul>
+
+          <h2>8. Modification of Service</h2>
+          <p>We reserve the right to modify or discontinue the service at any time, with or without notice.</p>
+
+          <h2>9. Governing Law</h2>
+          <p>These terms are governed by and construed in accordance with applicable laws, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+
+          <h2>10. Contact</h2>
+          <p>If you have any questions about these terms, please contact us at legal@aitrust.check</p>
+
+          <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.85rem;">
+            Last updated: July 2026
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-mount"></div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      ThemeManager.init();
+      DOM.render('header-mount', window.HeaderComponent.render());
+      DOM.render('footer-mount', window.FooterComponent.render());
+    });
+  </script>
+</body>
+</html>

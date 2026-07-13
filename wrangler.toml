@@ -1,0 +1,49 @@
+name = "ai-trust-check"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+main = "src/index.js"
+build = { command = "npm run build" }
+usage_model = "bundled"
+
+# Cloudflare Pages configuration
+[env.production]
+name = "ai-trust-check"
+routes = [
+  { pattern = "aitrust.check", zone_name = "aitrust.check" },
+  { pattern = "*.aitrust.check", zone_name = "aitrust.check" }
+]
+
+# Environment variables
+[env.production.vars]
+ENVIRONMENT = "production"
+API_BASE_URL = "https://aitrust.check/api"
+
+[env.staging]
+name = "ai-trust-check-staging"
+
+[env.staging.vars]
+ENVIRONMENT = "staging"
+API_BASE_URL = "https://staging-aitrust.check/api"
+
+# Build configuration
+[build]
+command = "echo 'Static site - no build required'"
+cwd = "./"
+watch_paths = ["/**/*.html", "/**/*.css", "/**/*.js"]
+
+# Observability
+[observability]
+enabled = true
+
+# Triggers (optional)
+[triggers.crons]
+crons = ["0 0 * * *"]  # Daily health check
+
+# KV Namespace for future use
+[[kv_namespaces]]
+binding = "CACHE"
+id = ""
+preview_id = ""

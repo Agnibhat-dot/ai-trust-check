@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META TAGS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Trust Check - Verify AI-generated answers, images, websites, emails, and online information in seconds. The world's most trusted AI verification platform.">
+  <meta name="keywords" content="AI verification, deepfake detector, fake news checker, scam email analyzer, trust checker, content verification">
+  <meta name="author" content="AI Trust Check">
+  
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitrust.check">
+  <meta property="og:title" content="AI Trust Check - Verify & Trust Online Content">
+  <meta property="og:description" content="Verify AI-generated answers, images, websites, emails, and online information in seconds.">
+  <meta property="og:image" content="https://aitrust.check/assets/images/og-image.png">
+  
+  <!-- TWITTER CARD -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://aitrust.check">
+  <meta property="twitter:title" content="AI Trust Check - Verify & Trust Online Content">
+  <meta property="twitter:description" content="Verify AI-generated answers, images, websites, emails, and online information in seconds.">
+  <meta property="twitter:image" content="https://aitrust.check/assets/images/twitter-image.png">
+  
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://aitrust.check/">
+  
+  <!-- FAVICONS -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- TITLE -->
+  <title>AI Trust Check - Verify AI-Generated Content & Online Information</title>
+  
+  <!-- STRUCTURED DATA - ORGANIZATION -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AI Trust Check",
+    "url": "https://aitrust.check",
+    "logo": "https://aitrust.check/assets/images/logo.png",
+    "description": "The world's most trusted AI verification platform",
+    "sameAs": [
+      "https://twitter.com/aitrust",
+      "https://linkedin.com/company/aitrust"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "support@aitrust.check"
+    }
+  }
+  </script>
+
+  <!-- STRUCTURED DATA - SEARCH ACTION -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://aitrust.check",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://aitrust.check/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- STRUCTURED DATA - BREADCRUMB -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://aitrust.check"
+    }]
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+  <!-- HEADER & NAVIGATION -->
+  <div id="header-mount"></div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <h1>Trust Before You Believe</h1>
+        <p>Verify AI-generated answers, images, websites, screenshots, emails, and online information in seconds.</p>
+        
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg" onclick="window.location.href='/pages/tools/index.html'">
+            Start Checking
+          </button>
+          <button class="btn btn-outline btn-lg" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+            Learn More
+          </button>
+        </div>
+
+        <!-- AD SPACE - Top Banner -->
+        <div style="margin-top: 3rem; padding: 1rem; background: var(--bg-secondary); border-radius: 1rem; border: 1px dashed var(--border-color); text-align: center; color: var(--text-tertiary); font-size: 0.875rem;">
+          💬 Advertisement Space - 728x90 or responsive
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK STATS -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="grid grid-4" style="text-align: center;">
+          <div>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--primary-blue);">50K+</div>
+            <div style="color: var(--text-secondary);">Daily Verifications</div>
+          </div>
+          <div>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--success);">98%</div>
+            <div style="color: var(--text-secondary);">Accuracy Rate</div>
+          </div>
+          <div>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--warning);">10</div>
+            <div style="color: var(--text-secondary);">Verification Tools</div>
+          </div>
+          <div>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--info);">24/7</div>
+            <div style="color: var(--text-secondary);">Always Available</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN TOOLS SECTION -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Verification Tools</h2>
+          <p>Choose the verification tool that matches your needs and get instant, detailed analysis.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div id="tool-cards"></div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="/pages/tools/index.html" class="btn btn-primary">
+            View All Tools
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2>How It Works</h2>
+          <p>Our verification process is simple, fast, and transparent.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card feature-card">
+            <div class="feature-icon">1️⃣</div>
+            <h3>Submit Content</h3>
+            <p>Paste text, upload an image, or enter a URL you want to verify. No account required.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">2️⃣</div>
+            <h3>Instant Analysis</h3>
+            <p>Our AI-powered algorithms analyze patterns, metadata, and known scam indicators in seconds.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">3️⃣</div>
+            <h3>Get Detailed Report</h3>
+            <p>Receive a comprehensive trust report with scores, recommendations, and actionable insights.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <p style="color: var(--text-secondary);">Reports are instant, detailed, and can be saved, shared, or downloaded as PDF.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST REPORT PREVIEW -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Professional Trust Reports</h2>
+          <p>Every analysis generates a detailed, shareable report you can trust.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <h3 style="margin: 0;">What's Inside Every Report</h3>
+            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
+              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <span style="color: var(--success); font-weight: 700;">✓</span>
+                <div>
+                  <strong>Trust Score</strong> - Comprehensive trustworthiness rating
+                </div>
+              </li>
+              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <span style="color: var(--success); font-weight: 700;">✓</span>
+                <div>
+                  <strong>Risk Assessment</strong> - Identified threats and concerns
+                </div>
+              </li>
+              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <span style="color: var(--success); font-weight: 700;">✓</span>
+                <div>
+                  <strong>Evidence & Findings</strong> - Detailed analysis breakdown
+                </div>
+              </li>
+              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <span style="color: var(--success); font-weight: 700;">✓</span>
+                <div>
+                  <strong>Confidence Level</strong> - How certain we are of findings
+                </div>
+              </li>
+              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <span style="color: var(--success); font-weight: 700;">✓</span>
+                <div>
+                  <strong>Recommendations</strong> - What to do next
+                </div>
+              </li>
+              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <span style="color: var(--success); font-weight: 700;">✓</span>
+                <div>
+                  <strong>Shareable Link</strong> - Share with others (optional)
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card" style="background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(16, 185, 129, 0.1)); display: flex; align-items: center; justify-content: center; min-height: 300px;">
+            <div style="text-align: center;">
+              <div style="font-size: 3rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 0.5rem;">85</div>
+              <div style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">High Trust</div>
+              <div style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 250px;">
+                Example trust report showing verification results
+              </div>
+              <button class="btn btn-primary" onclick="window.location.href='/pages/tools/index.html'">
+                Try It Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARNING CENTER PREVIEW -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2>Learn & Stay Safe</h2>
+          <p>Educational resources to help you understand AI, deepfakes, scams, and digital security.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <a href="/pages/knowledge/index.html" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">🧠</div>
+            <h3 style="margin: 0;">AI Safety Academy</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Learn how AI works and why verification matters.</p>
+          </a>
+
+          <a href="/pages/knowledge/index.html" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">🎭</div>
+            <h3 style="margin: 0;">Deepfake Guide</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Understand deepfakes and how to spot manipulated media.</p>
+          </a>
+
+          <a href="/pages/knowledge/index.html" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">🚨</div>
+            <h3 style="margin: 0;">Scam Alert Center</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Know the latest scams and how to protect yourself.</p>
+          </a>
+
+          <a href="/pages/knowledge/index.html" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">🔍</div>
+            <h3 style="margin: 0;">Fact-Checking Tips</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Master the skills to verify information yourself.</p>
+          </a>
+
+          <a href="/pages/knowledge/index.html" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">🛡️</div>
+            <h3 style="margin: 0;">Digital Forensics</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Learn how experts detect manipulated content.</p>
+          </a>
+
+          <a href="/pages/knowledge/index.html" class="card feature-card" style="text-decoration: none;">
+            <div class="feature-icon">📚</div>
+            <h3 style="margin: 0;">Security Guide</h3>
+            <p style="margin: 0; font-size: 0.95rem;">Comprehensive cybersecurity and privacy tips.</p>
+          </a>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="/pages/knowledge/index.html" class="btn btn-primary">
+            Browse All Resources
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY DATABASE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Community Database</h2>
+          <p>A growing database of verified scams, fake websites, and AI-generated misinformation. Contribute and learn from others.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 style="margin-top: 0;">Latest Submissions</h3>
+            <div id="latest-submissions">
+              <p style="text-align: center; color: var(--text-tertiary);">Loading latest submissions...</p>
+            </div>
+          </div>
+
+          <div class="card" style="background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(245, 158, 11, 0.1)); display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
+            <div>
+              <h3 style="margin: 0 0 0.5rem;">Share Your Experience</h3>
+              <p style="margin: 0; color: var(--text-secondary);">Found a scam? Spotted a deepfake? Help others by submitting to our database.</p>
+            </div>
+            <button class="btn btn-primary" onclick="window.location.href='/pages/community/index.html'">
+              Go to Community
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2>Latest Articles</h2>
+          <p>Stay informed with the latest news on AI safety, security, and online verification.</p>
+        </div>
+
+        <div class="grid grid-3" id="blog-preview">
+          <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+            <p style="color: var(--text-tertiary);">Loading latest articles...</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="/pages/blog/index.html" class="btn btn-primary">
+            Read All Articles
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AD SPACE - Middle Content -->
+    <section class="section">
+      <div class="container">
+        <div style="padding: 2rem; background: var(--bg-secondary); border-radius: 1rem; border: 1px dashed var(--border-color); text-align: center; color: var(--text-tertiary); font-size: 0.875rem;">
+          💬 Advertisement Space - 300x250 or responsive
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section" style="background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(16, 185, 129, 0.1)); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ready to Verify?</h2>
+          <p>Join thousands of people who use AI Trust Check every day to verify content and stay safe online.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⚡</div>
+            <strong>Instant Results</strong>
+            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Get verification results in seconds</p>
+          </div>
+
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔒</div>
+            <strong>Private & Secure</strong>
+            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Your data is never sold or shared</p>
+          </div>
+
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✅</div>
+            <strong>Always Free</strong>
+            <p style="color: var(--text-secondary); margin-top: 0.5rem;">No credit card required to get started</p>
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <button class="btn btn-primary btn-lg" onclick="window.location.href='/pages/tools/index.html'">
+            Start Verifying Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- AD SPACE - Bottom Banner -->
+    <section class="section">
+      <div class="container">
+        <div style="padding: 1rem; background: var(--bg-secondary); border-radius: 1rem; border: 1px dashed var(--border-color); text-align: center; color: var(--text-tertiary); font-size: 0.875rem;">
+          💬 Advertisement Space - 728x90 or responsive
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="grid grid-2" id="faq-section">
+          <!-- FAQ items will be loaded here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-mount"></div>
+
+  <!-- SCRIPTS -->
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+  
+  <script>
+    // Mount header and footer
+    document.getElementById('header-mount').innerHTML = HeaderComponent.render();
+    document.getElementById('footer-mount').innerHTML = FooterComponent.render();
+    HeaderComponent.init();
+
+    // Tool cards data
+    const tools = [
+      {
+        id: 'ai-answer-checker',
+        name: 'AI Answer Verifier',
+        icon: '💬',
+        description: 'Verify AI responses for unsupported claims and accuracy'
+      },
+      {
+        id: 'fake-news-checker',
+        name: 'Fake News Checker',
+        icon: '📰',
+        description: 'Check articles and URLs for credibility and bias'
+      },
+      {
+        id: 'website-trust-checker',
+        name: 'Website Trust Checker',
+        icon: '🌐',
+        description: 'Scan websites for security signals and reputation'
+      },
+      {
+        id: 'scam-email-analyzer',
+        name: 'Scam Email Analyzer',
+        icon: '📧',
+        description: 'Detect phishing, spoofing, and email threats'
+      },
+      {
+        id: 'screenshot-inspector',
+        name: 'Screenshot Inspector',
+        icon: '🖼️',
+        description: 'Analyze screenshots for editing and manipulation'
+      },
+      {
+        id: 'ai-image-detector',
+        name: 'AI Image Detector',
+        icon: '🤖',
+        description: 'Detect AI-generated and manipulated images'
+      },
+      {
+        id: 'deepfake-detector',
+        name: 'Deepfake Detector',
+        icon: '🎭',
+        description: 'Identify deepfake videos and manipulated media'
+      },
+      {
+        id: 'claim-verifier',
+        name: 'Claim Verifier',
+        icon: '✓',
+        description: 'Verify statements and find supporting evidence'
+      },
+      {
+        id: 'url-safety-checker',
+        name: 'URL Safety Checker',
+        icon: '🔗',
+        description: 'Check links for phishing, redirects, and threats'
+      }
+    ];
+
+    // Render tool cards
+    const toolCardsContainer = document.getElementById('tool-cards');
+    if (toolCardsContainer) {
+      toolCardsContainer.innerHTML = tools
+        .slice(0, 6)
+        .map(tool => ToolCard.render(tool))
+        .join('');
+    }
+
+    // FAQ Section
+    const faqs = [
+      {
+        q: 'Is AI Trust Check free to use?',
+        a: 'Yes! AI Trust Check is completely free. No credit card required. We\'re committed to making verification accessible to everyone.'
+      },
+      {
+        q: 'How accurate is the verification?',
+        a: 'Our verification tools use advanced AI algorithms and maintain a 98% accuracy rate. However, no verification system is 100% perfect. Always use common sense.'
+      },
+      {
+        q: 'Is my data private?',
+        a: 'Absolutely. We never store your verification data. All analyses are processed instantly and securely. Your privacy is paramount.'
+      },
+      {
+        q: 'Which types of content can I verify?',
+        a: 'You can verify AI responses, news articles, websites, emails, screenshots, images, videos, and general claims. We support most content types.'
+      },
+      {
+        q: 'How fast are the results?',
+        a: 'Most verifications complete in seconds. Comprehensive image and video analysis may take 30-60 seconds depending on file size.'
+      },
+      {
+        q: 'Can I integrate with my workflow?',
+        a: 'Yes! Our browser extension, API, and integrations let you verify content without leaving your favorite apps.'
+      }
+    ];
+
+    const faqSection = document.getElementById('faq-section');
+    if (faqSection) {
+      faqSection.innerHTML = faqs
+        .map((faq, i) => `
+          <div class="card">
+            <h4 style="margin-top: 0; cursor: pointer;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? '' : 'none'">
+              ${faq.q} <span style="float: right; color: var(--primary-blue);">▼</span>
+            </h4>
+            <p style="margin: 0; color: var(--text-secondary);">${faq.a}</p>
+          </div>
+        `)
+        .join('');
+    }
+
+    // Sample community submissions
+    const submissions = [
+      { type: '📧 Phishing Email', title: 'Fake PayPal Account Verification', date: '2 hours ago' },
+      { type: '🌐 Fake Website', title: 'Amazon Delivery Scam Clone', date: '5 hours ago' },
+      { type: '🎭 Deepfake Video', title: 'Celebrity Voice Deepfake', date: '1 day ago' },
+      { type: '📰 Fake News', title: 'AI Predicts False Event', date: '2 days ago' }
+    ];
+
+    const submissionsEl = document.getElementById('latest-submissions');
+    if (submissionsEl) {
+      submissionsEl.innerHTML = submissions
+        .map(s => `
+          <div style="padding: 1rem 0; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: start;">
+            <div>
+              <div class="badge" style="margin-bottom: 0.5rem;">${s.type}</div>
+              <div style="font-weight: 500;">${s.title}</div>
+              <div style="font-size: 0.875rem; color: var(--text-tertiary);">${s.date}</div>
+            </div>
+            <span style="color: var(--primary-blue);">→</span>
+          </div>
+        `)
+        .join('');
+    }
+
+    // Blog preview
+    const blogArticles = [
+      { title: 'How to Spot AI-Generated Images in 2024', date: 'Jan 15, 2024', category: 'AI Safety' },
+      { title: 'Latest Phishing Scams Targeting Your Email', date: 'Jan 14, 2024', category: 'Security' },
+      { title: 'Understanding Deepfake Technology', date: 'Jan 12, 2024', category: 'Education' }
+    ];
+
+    const blogEl = document.getElementById('blog-preview');
+    if (blogEl) {
+      blogEl.innerHTML = blogArticles
+        .map(article => `
+          <a href="/pages/blog/index.html" class="card" style="text-decoration: none;">
+            <div class="badge badge-primary" style="margin-bottom: 1rem;">${article.category}</div>
+            <h3 style="margin: 0 0 1rem;">${article.title}</h3>
+            <div style="color: var(--text-tertiary); font-size: 0.875rem;">${article.date}</div>
+          </a>
+        `)
+        .join('');
+    }
+
+    // Analytics event
+    Analytics.pageView('/');
+  </script>
+</body>
+</html>

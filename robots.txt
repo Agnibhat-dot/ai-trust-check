@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+Disallow: /pages/reports/*
+
+# Allow search engines to crawl all content except private reports
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemaps
+Sitemap: https://aitrust.check/sitemap.xml
+Sitemap: https://aitrust.check/sitemap-tools.xml
+Sitemap: https://aitrust.check/sitemap-blog.xml
+Sitemap: https://aitrust.check/sitemap-knowledge.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Block AI training bots (optional)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /

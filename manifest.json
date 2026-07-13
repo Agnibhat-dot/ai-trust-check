@@ -1,0 +1,123 @@
+{
+  "name": "AI Trust Check - Content Verification Platform",
+  "short_name": "AI Trust Check",
+  "description": "Verify AI-generated answers, images, websites, emails, and online information in seconds",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0e27",
+  "theme_color": "#0066ff",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/assets/images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/favicon-192x192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/images/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/favicon-512x512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/images/screenshot-1.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/assets/images/screenshot-2.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": [
+    "productivity",
+    "utilities"
+  ],
+  "shortcuts": [
+    {
+      "name": "AI Answer Verifier",
+      "short_name": "AI Checker",
+      "description": "Verify AI-generated responses",
+      "url": "/pages/tools/ai-answer-checker.html",
+      "icons": [
+        {
+          "src": "/assets/icons/ai-checker.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Deepfake Detector",
+      "short_name": "Deepfakes",
+      "description": "Detect deepfake videos and images",
+      "url": "/pages/tools/deepfake-detector.html",
+      "icons": [
+        {
+          "src": "/assets/icons/deepfake.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Scam Email Analyzer",
+      "short_name": "Scam Checker",
+      "description": "Analyze emails for phishing",
+      "url": "/pages/tools/scam-email-analyzer.html",
+      "icons": [
+        {
+          "src": "/assets/icons/scam.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "media",
+          "accept": [
+            "image/*",
+            "video/*"
+          ]
+        }
+      ]
+    }
+  }
+}

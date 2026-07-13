@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cookie Policy - Information about how AI Trust Check uses cookies and tracking technologies.">
+  <meta name="keywords" content="cookie policy, cookies, tracking, consent">
+  <meta name="author" content="AI Trust Check">
+  
+  <link rel="canonical" href="https://aitrust.check/cookies.html">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Cookie Policy - AI Trust Check</title>
+</head>
+
+<body data-theme="dark">
+  <div id="header-mount"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Cookie Policy</h1>
+        <p>Learn how AI Trust Check uses cookies and tracking technologies.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 900px;">
+        <div style="font-size: 0.95rem; line-height: 1.8;">
+          
+          <h2>1. What Are Cookies?</h2>
+          <p>Cookies are small text files stored on your device that contain information about your browsing behavior. They allow websites to remember your preferences and improve your experience.</p>
+
+          <h2>2. Types of Cookies We Use</h2>
+          
+          <h3>Essential Cookies</h3>
+          <p>Required for basic functionality:</p>
+          <ul style="list-style-position: inside;">
+            <li><strong>Theme Preference:</strong> Remembers your dark/light mode choice</li>
+            <li><strong>Session Data:</strong> Maintains your session while using tools</li>
+            <li><strong>Security:</strong> Protects against security threats</li>
+          </ul>
+
+          <h3>Analytics Cookies (Optional)</h3>
+          <p>Help us understand how you use the service:</p>
+          <ul style="list-style-position: inside;">
+            <li><strong>Google Analytics:</strong> Anonymous traffic data (opt-in)</li>
+            <li><strong>Usage Statistics:</strong> Popular tools and features</li>
+            <li><strong>Performance Data:</strong> Page load times and errors</li>
+          </ul>
+
+          <h3>Advertising Cookies (Optional)</h3>
+          <p>Used for Google AdSense and targeted ads:</p>
+          <ul style="list-style-position: inside;">
+            <li><strong>Google AdSense:</strong> Personalized advertising</li>
+            <li><strong>Ad Preferences:</strong> Tailored ad content</li>
+            <li><strong>Conversion Tracking:</strong> Campaign effectiveness</li>
+          </ul>
+
+          <h2>3. Third-Party Cookies</h2>
+          <p>We use cookies from:</p>
+          <ul style="list-style-position: inside;">
+            <li><strong>Google Analytics:</strong> Website analytics</li>
+            <li><strong>Google AdSense:</strong> Advertising platform</li>
+            <li><strong>Facebook Pixel:</strong> Cross-site analytics (optional)</li>
+          </ul>
+
+          <h2>4. Your Cookie Preferences</h2>
+          <p>You can control cookies through:</p>
+          <ul style="list-style-position: inside;">
+            <li>Your browser's cookie settings</li>
+            <li>Opting out of analytics in our privacy settings</li>
+            <li>Do Not Track (DNT) browser features</li>
+            <li>Google's ads personalization controls</li>
+          </ul>
+
+          <h2>5. Cookie Retention</h2>
+          <p>Cookie duration varies:</p>
+          <ul style="list-style-position: inside;">
+            <li><strong>Session Cookies:</strong> Deleted when you close your browser</li>
+            <li><strong>Persistent Cookies:</strong> Retained for up to 2 years</li>
+            <li><strong>Analytics:</strong> Up to 26 months (Google Analytics default)</li>
+          </ul>
+
+          <h2>6. Disabling Cookies</h2>
+          <p>You can disable cookies in your browser settings:</p>
+          <ul style="list-style-position: inside;">
+            <li><strong>Chrome:</strong> Settings → Privacy and Security → Cookies</li>
+            <li><strong>Firefox:</strong> Settings → Privacy & Security → Cookies</li>
+            <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data</li>
+            <li><strong>Edge:</strong> Settings → Privacy → Cookies</li>
+          </ul>
+
+          <h2>7. Do Not Track (DNT)</h2>
+          <p>If your browser sends a DNT signal, we respect your choice and limit tracking. However, some features may not work optimally.</p>
+
+          <h2>8. GDPR & CCPA Compliance</h2>
+          <p><strong>EU (GDPR):</strong> Essential cookies are enabled by default. Analytics and advertising require explicit consent.</p>
+          <p><strong>California (CCPA):</strong> You have the right to opt-out of the sale or sharing of your personal information.</p>
+
+          <h2>9. Changes to This Policy</h2>
+          <p>We may update this cookie policy periodically. Changes take effect immediately upon posting.</p>
+
+          <h2>10. Contact</h2>
+          <p>Questions about our cookie usage? Contact privacy@aitrust.check</p>
+
+          <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.85rem;">
+            Last updated: July 2026
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-mount"></div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="/js/utils/main.js"></script>
+  <script src="/js/components/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      ThemeManager.init();
+      DOM.render('header-mount', window.HeaderComponent.render());
+      DOM.render('footer-mount', window.FooterComponent.render());
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{
+  "name": "ai-trust-check",
+  "version": "1.0.0",
+  "description": "The world's most trusted AI verification platform. Verify AI answers, detect deepfakes, identify scams, and fact-check online information.",
+  "keywords": [
+    "AI verification",
+    "deepfake detector",
+    "fake news checker",
+    "scam email analyzer",
+    "trust checker",
+    "content verification",
+    "AI safety"
+  ],
+  "author": "AI Trust Check Team",
+  "license": "Proprietary",
+  "homepage": "https://aitrust.check",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-trust-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ai-trust-check/issues",
+    "email": "support@aitrust.check"
+  },
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "npx http-server -p 8000 -o",
+    "build": "echo 'No build required - static site'",
+    "serve": "npx serve .",
+    "test": "echo 'No tests configured'",
+    "lint": "echo 'No linter configured'"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "meta": {
+    "tagline": "Trust Before You Believe",
+    "taglineExtended": "Verify AI-generated answers, images, websites, screenshots, emails, and online information in seconds",
+    "features": [
+      "10 Verification Tools",
+      "Knowledge Center",
+      "Community Database",
+      "Professional Reports",
+      "Dark/Light Mode",
+      "Mobile Responsive",
+      "SEO Optimized",
+      "AdSense Ready"
+    ],
+    "tools": [
+      "AI Answer Verifier",
+      "Fake News Checker",
+      "Website Trust Checker",
+      "Scam Email Analyzer",
+      "Screenshot Inspector",
+      "AI Image Detector",
+      "Deepfake Detector",
+      "Claim Verifier",
+      "URL Safety Checker",
+      "Hallucination Detector"
+    ],
+    "sections": [
+      "Homepage",
+      "Tools Directory",
+      "Knowledge Center",
+      "Blog",
+      "Community Database",
+      "Reports",
+      "Legal Pages",
+      "API Documentation"
+    ]
+  }
+}
