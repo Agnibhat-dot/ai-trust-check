@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/
   
   <!-- Homepage -->
   <url>
@@ -14,28 +12,28 @@
   <!-- Main Pages -->
   <url>
     <loc>https://aitrust.check/pages/tools/index.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/knowledge/index.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/blog/index.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/community/index.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -43,70 +41,70 @@
   <!-- Tools -->
   <url>
     <loc>https://aitrust.check/pages/tools/ai-answer-checker.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/tools/fake-news-checker.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/tools/website-trust-checker.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/tools/scam-email-analyzer.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/tools/screenshot-inspector.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/tools/ai-image-detector.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/tools/deepfake-detector.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/tools/claim-verifier.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/tools/url-safety-checker.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/pages/tools/hallucination-detector.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -114,35 +112,35 @@
   <!-- Legal Pages -->
   <url>
     <loc>https://aitrust.check/privacy.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/terms.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/cookies.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/about.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://aitrust.check/contact.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
