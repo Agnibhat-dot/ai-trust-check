@@ -120,6 +120,14 @@
               <p style="margin: 0.5rem 0; font-weight: 500;">Click to upload or drag & drop</p>
               <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);">PNG, JPG, WEBP up to 20MB</p>
               <input type="file" id="image-file" accept="image/*" style="display: none;">
+              <div id="image-preview-container" style="display:none; margin-top:20px; text-align:center;">
+    <img id="image-preview"
+         alt="Image Preview"
+         style="max-width:100%; max-height:350px; border-radius:8px; border:1px solid var(--border);">
+
+    <p id="image-name"
+       style="margin-top:10px; color:var(--text-secondary);"></p>
+</div>
             </div>
             <button onclick="analyzeImage()" class="btn btn-primary btn-block" style="margin-top: 1rem;">Analyze Image</button>
           </div>
@@ -253,11 +261,38 @@ document.getElementById('footer-mount').innerHTML =
         document.getElementById('image-file').click();
       });
 
-      document.getElementById('image-file').addEventListener('change', (e) => {
-        if (e.target.files.length > 0) {
-          Toast.show('Image selected: ' + e.target.files[0].name, 'success');
-        }
-      });
+      const imageInput = document.getElementById('image-file');
+const preview = document.getElementById('image-preview');
+const previewContainer = document.getElementById('image-preview-container');
+const imageName = document.getElementById('image-name');
+      
+console.log(imageInput);
+console.log(preview);
+console.log(previewContainer);
+console.log(imageName);
+      
+imageInput.addEventListener('change', (e) => {
+
+    const file = e.target.files[0];
+
+    if (!file) return;
+
+    imageName.textContent = file.name;
+
+    const reader = new FileReader();
+
+    reader.onload = function(event) {
+
+        preview.src = event.target.result;
+        previewContainer.style.display = 'block';
+
+    };
+
+    reader.readAsDataURL(file);
+
+    Toast.show('Image selected: ' + file.name, 'success');
+
+})
     });
 
     function analyzeImage() {
